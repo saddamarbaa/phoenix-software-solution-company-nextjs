@@ -1,7 +1,8 @@
 /** @format */
 
 import { Fragment } from "react";
-// import Footer from "./footer";
+import Footer from "./footer";
+import ScrollToTopComponent from "./scroll-to-top";
 
 import MainNavigation from "./main-navigation";
 
@@ -10,7 +11,8 @@ function Layout(props) {
 		<Fragment>
 			<MainNavigation />
 			<main>{props.children}</main>
-			{/* <Footer /> */}
+			<Footer />
+			<ScrollToTopComponent />
 		</Fragment>
 	);
 }
