@@ -3,8 +3,7 @@
 import { Fragment } from "react";
 import Head from "next/head";
 
-import Hero from "../components/home-page/hero";
-
+import HomePageComponent from "../components/home-page/home-page";
 function HomePage(props) {
 	return (
 		<Fragment>
@@ -15,8 +14,7 @@ function HomePage(props) {
 					content='Helping companies & individuals identify key solutions for their target markets. We boost their ability to create products. Our business model saves clients time and money. Don`t reinvent the wheel..'
 				/>
 			</Head>
-			{/* <Hero /> */}
-			hello
+			<HomePageComponent />
 		</Fragment>
 	);
 }

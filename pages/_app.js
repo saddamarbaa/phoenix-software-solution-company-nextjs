@@ -33,15 +33,10 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<Layout>
 			<Head>
-				<title>Saddam' Blog</title>
-				<meta
-					name='viewport'
-					content='width=device-width, initial-scale=1'
-				/>
-				<meta name='author' content='Saddam Arbaa' />
+				<title>PHOENIX SOFTWARE SOLUTION</title>
 				<meta
 					name='description'
-					content='I post about programming and web development.'
+					content='Helping companies & individuals identify key solutions for their target markets. We boost their ability to create products. Our business model saves clients time and money. Don`t reinvent the wheel..'
 				/>
 			</Head>
 

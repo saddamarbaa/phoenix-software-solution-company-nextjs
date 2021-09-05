@@ -63,6 +63,7 @@ export default MainNavigation;
 
 const Header = styled.header`
 	color: white;
+
 	background: var(--color-primary);
 	width: 100%;
 	height: 7rem;

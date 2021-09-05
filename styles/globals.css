@@ -12,6 +12,12 @@
 
 body {
 	--color-primary: #0f0b33;
+	--color-secondary: #00d0b0;
+	--color-secondary-second: #ff9700;
+
+	--transition-duration: 0.3s;
+	--line-height: 1.7;
+
 	--color-grey-50: hsl(265, 55%, 96%);
 	--color-grey-100: hsl(265, 19%, 88%);
 	--color-grey-200: hsl(265, 7%, 70%);
@@ -50,6 +56,8 @@ body {
 	--size-40: 10rem;
 
 	font-family: "Roboto", sans-serif;
+
+	overflow-x: hidden;
 }
 
 h1,
