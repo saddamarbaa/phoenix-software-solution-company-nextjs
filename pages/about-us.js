@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
+import AboutUsComponent from "../components/about-us-page/about-us";
 
 function AboutUsPage() {
 	return (
@@ -10,7 +11,7 @@ function AboutUsPage() {
 				<title></title>
 				<meta name='description' content='!' />
 			</Head>
-			<h1>About us page </h1>
+			<AboutUsComponent />
 		</Fragment>
 	);
 }
