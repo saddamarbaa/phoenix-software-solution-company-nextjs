@@ -185,6 +185,7 @@ const ServicesTop = styled.div`
 			@media (min-width: 568px) {
 				min-width: 450px;
 				max-width: 500px;
+				font-size: 1.1rem;
 			}
 		}
 	}

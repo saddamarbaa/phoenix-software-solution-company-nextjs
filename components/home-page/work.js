@@ -184,6 +184,10 @@ const Container = styled.div`
 const Container3grid = styled(Container)`
 	grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
 	margin-top: 3.75rem;
+
+	@media (max-width: 500px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
 const ContentContainer = styled.div`

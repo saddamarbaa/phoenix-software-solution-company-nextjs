@@ -53,6 +53,22 @@ const TESTIMONIAL = () => {
 					</ArrowsWrapper>
 				</div>
 			</TopContainer>
+			<BottomContainer>
+				<h2>WORK WITH US</h2>
+				<div className='bottom-inner-container'>
+					<div>
+						<p>Have you decided to work on a project with us?</p>
+					</div>
+
+					<p>
+						Interested in joining our team and impacting the world? Reach
+						out! We are always looking for new projects to help take
+						design to the next level!
+					</p>
+				</div>
+
+				<CustomButton>HIRE US</CustomButton>
+			</BottomContainer>
 		</Wrapper>
 	);
 };
@@ -69,6 +85,7 @@ const Wrapper = styled.div`
 `;
 
 const TopContainer = styled.div`
+	margin-bottom: 5rem;
 	@media (min-width: 768px) {
 		display: flex;
 		justify-content: space-between;
@@ -187,4 +204,66 @@ const Arrows = styled.div`
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+`;
+
+const BottomContainer = styled.div`
+	@media (min-width: 768px) {
+		padding-left: 9%;
+	}
+	h2 {
+		margin-bottom: 2rem;
+		color: var(--color-secondary-second);
+	}
+
+	.bottom-inner-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		div {
+			font-size: 1rem;
+			font-weight: bold;
+			font-size: 1.1rem;
+		}
+	}
+
+	p {
+		line-height: var(--line-height);
+		max-width: 585px;
+		margin: 1rem 0 !important;
+		font-size: 1.1rem;
+
+		@media (max-width: 568px) {
+			min-width: 200px;
+			font-size: 1rem;
+		}
+	}
+`;
+
+const CustomButton = styled.button`
+	display: block;
+	width: 148px;
+	height: 48px;
+	font: inherit;
+	font-size: 0.9rem;
+	cursor: pointer;
+	font-weight: bold;
+	background-color: var(--color-secondary);
+	border: 1px solid var(--color-secondary);
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	transition-duration: var(--transition-duration);
+	min-width: fit-content;
+	color: white;
+	margin-top: 2rem;
+
+	&:hover {
+		background: rgba(0, 208, 176, 0.7);
+		border-color: rgba(0, 208, 176, 0.7);
+	}
 `;

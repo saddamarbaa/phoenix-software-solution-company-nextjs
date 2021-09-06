@@ -44,6 +44,9 @@ const Wrapper = styled.div`
 		@media (max-width: 568px) {
 			width: 5rem;
 			height: 6rem;
+			@media (max-width: 300px) {
+				display: none;
+			}
 		}
 		img {
 			display: block;

@@ -42,6 +42,9 @@ function MainNavigation() {
 
 						<li className='hid-big'>
 							<MenuIcon
+								style={{
+									cursor: "pointer",
+								}}
 								onClick={() => {
 									SetBurgerMenuStatus(true);
 								}}
