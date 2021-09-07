@@ -54,10 +54,10 @@ function MainNavigation() {
 				</nav>
 				<button>GET STARTED</button>
 			</Header>
-			<SideBar
+			{/* <SideBar
 				burgerMenuStatus={burgerMenuStatus}
 				SetBurgerMenuStatus={SetBurgerMenuStatus}
-			/>
+			/> */}
 		</fragment>
 	);
 }

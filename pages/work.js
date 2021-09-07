@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
+import WorkComponent from "../components/work-page/work";
 
 function WorkPage() {
 	return (
@@ -10,7 +11,7 @@ function WorkPage() {
 				<title></title>
 				<meta name='description' content='!' />
 			</Head>
-			<h1>Work page </h1>
+			<WorkComponent />
 		</Fragment>
 	);
 }
