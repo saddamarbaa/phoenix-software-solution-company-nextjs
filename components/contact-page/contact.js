@@ -13,7 +13,7 @@ const Contact = () => {
 			<TopWrapper>
 				<Container>
 					<h2>CONTACT US</h2>
-					<p>Let's Talk For The Next Project</p>
+					<p>Let&apos;s Talk For The Next Project</p>
 				</Container>
 			</TopWrapper>
 			<BottomWrapper>
@@ -242,6 +242,10 @@ const ContactInfo = styled.div`
 		min-height: 40px;
 		margin-top: 2rem;
 		align-items: center;
+
+		@media (max-width: 568px) {
+			margin-top: 1rem;
+		}
 
 		@media (max-width: 400px) {
 			display: none;

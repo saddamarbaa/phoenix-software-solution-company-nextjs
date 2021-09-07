@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
-
+import React, { fragment } from "react";
 import Logo from "./logo";
 import SideBar from "./side-bar";
 
@@ -12,7 +12,7 @@ function MainNavigation() {
 	const [burgerMenuStatus, SetBurgerMenuStatus] = useState(false);
 
 	return (
-		<>
+		<fragment>
 			<Header>
 				<Link href='/'>
 					<a>
@@ -58,7 +58,7 @@ function MainNavigation() {
 				burgerMenuStatus={burgerMenuStatus}
 				SetBurgerMenuStatus={SetBurgerMenuStatus}
 			/>
-		</>
+		</fragment>
 	);
 }
 

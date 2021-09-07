@@ -9,7 +9,10 @@ function ContactPage() {
 		<Fragment>
 			<Head>
 				<title>Contact </title>
-				<meta name='description' content='Send me your messages!' />
+				<meta
+					name='description'
+					content='CONTACT US Lets Talk For The Next Project'
+				/>
 			</Head>
 			<Contact />
 		</Fragment>
