@@ -20,19 +20,22 @@ const TESTIMONIAL = () => {
 
 				<div className='second-content'>
 					<h2>Web Development</h2>
-					<p>
+					<p className='p-s'>
 						Phoenix Software Solutions is absolutely incredible. They are
 						the most talented group of designers I,ve ever worked with or
 						encountered.
 					</p>
-					<p>
+					<p className='p-s'>
 						They are also very professional and complete everything to the
 						highest quality bar. A+ will be my first call for design work
 						for years to come.
 					</p>
 					<div className='user'>
 						<IconButton style={{ marginLeft: "-1rem" }}>
-							<Avatar src='/home/user.png' />
+							<Avatar
+								src='/home/user.png'
+								style={{ width: "70px", height: "70px" }}
+							/>
 						</IconButton>
 						<div>
 							<p style={{ fontWeight: "bold" }}>Eleuterio Prieto</p>
@@ -54,20 +57,20 @@ const TESTIMONIAL = () => {
 				</div>
 			</TopContainer>
 			<BottomContainer>
-				<h2>WORK WITH US</h2>
-				<div className='bottom-inner-container'>
-					<div>
-						<p>Have you decided to work on a project with us?</p>
+				<WorkSection>
+					<h2>WORK WITH US</h2>
+					<div className='bottom-inner-container'>
+						<h1>Have you decided to work on a project with us?</h1>
+
+						<p>
+							Interested in joining our team and impacting the world?
+							Reach out! We are always looking for new projects to help
+							take design to the next level!
+						</p>
 					</div>
 
-					<p>
-						Interested in joining our team and impacting the world? Reach
-						out! We are always looking for new projects to help take
-						design to the next level!
-					</p>
-				</div>
-
-				<CustomButton>HIRE US</CustomButton>
+					<CustomButton>HIRE US</CustomButton>
+				</WorkSection>
 			</BottomContainer>
 		</Wrapper>
 	);
@@ -76,7 +79,8 @@ const TESTIMONIAL = () => {
 export default TESTIMONIAL;
 
 const Wrapper = styled.div`
-	background: #fffeee;
+	background: #e5e5e5;
+
 	padding: 5rem 9%;
 	@media (min-width: 768px) {
 		padding: 8rem 9%;
@@ -149,11 +153,19 @@ const TopContainer = styled.div`
 
 		h2 {
 			margin: 1.2rem 0;
+			margin-bottom: 2rem;
 		}
 
 		p {
 			line-height: var(--line-height);
-			margin-bottom: 1rem;
+		}
+
+		p.p-s {
+			font-size: 1.1rem;
+			@media (max-width: 568px) {
+				min-width: 12.5rem;
+				font-size: 1rem;
+			}
 		}
 
 		.user {
@@ -210,9 +222,26 @@ const BottomContainer = styled.div`
 	@media (min-width: 768px) {
 		padding-left: 9%;
 	}
+`;
+
+const WorkSection = styled.div`
+	margin-top: 5rem;
 	h2 {
 		margin-bottom: 2rem;
 		color: var(--color-secondary-second);
+	}
+
+	h1 {
+		max-width: 477px;
+		color: #0f0b33;
+
+		@media (max-width: 568px) {
+			font-size: 1.4rem;
+		}
+
+		@media (min-width: 991px) {
+			font-size: 2rem;
+		}
 	}
 
 	.bottom-inner-container {
@@ -220,21 +249,14 @@ const BottomContainer = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-		div {
-			font-size: 1rem;
-			font-weight: bold;
-			font-size: 1.1rem;
-		}
 	}
-
 	p {
 		line-height: var(--line-height);
-		max-width: 585px;
+		max-width: 36.5625rem;
 		margin: 1rem 0 !important;
 		font-size: 1.1rem;
-
 		@media (max-width: 568px) {
-			min-width: 200px;
+			min-width: 12.5rem;
 			font-size: 1rem;
 		}
 	}
@@ -243,9 +265,8 @@ const BottomContainer = styled.div`
 const CustomButton = styled.button`
 	display: block;
 	width: 148px;
-	height: 48px;
+	height: 54px;
 	font: inherit;
-	font-size: 0.9rem;
 	cursor: pointer;
 	font-weight: bold;
 	background-color: var(--color-secondary);
@@ -261,7 +282,9 @@ const CustomButton = styled.button`
 	min-width: fit-content;
 	color: white;
 	margin-top: 2rem;
-
+	@media (max-width: 568px) {
+		width: 80%;
+	}
 	&:hover {
 		background: rgba(0, 208, 176, 0.7);
 		border-color: rgba(0, 208, 176, 0.7);

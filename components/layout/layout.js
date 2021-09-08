@@ -12,7 +12,7 @@ function Layout(props) {
 			<MainNavigation />
 			<main>{props.children}</main>
 			<Footer />
-			{/* <ScrollToTopComponent /> */}
+			<ScrollToTopComponent />
 		</Fragment>
 	);
 }

@@ -13,7 +13,7 @@ const Meeting = () => {
 				<div className='content-container'>
 					<h2>Lets Meet Our Team</h2>
 					<div>
-						<p>8 Member</p>
+						<p>7 Member</p>
 						<span>DESIGNER - DEVELOPER - MARKETING</span>
 					</div>
 				</div>
@@ -38,360 +38,365 @@ const Meeting = () => {
 						</div>
 					</div>
 				</TeamInfo>
-				<GidContainer>
-					<GidContent style={{ background: "#0f0b33", color: "white" }}>
-						<IconButton>
-							<Avatar
-								src='/about-us/tem-img.png'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Otoniel Cortez </h3>
-							<p>Founder</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows
-								style={{
-									border: "1px solid #575470",
-									background: "#0f0b33",
-								}}>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#ff9700",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows
-								style={{
-									border: "1px solid #575470",
-									background: "#0f0b33",
-								}}>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#ff9700", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+				<GridWrapper>
+					<GidContainer>
+						<GidContent style={{ background: "#0f0b33", color: "white" }}>
+							<IconButton>
+								<Avatar
+									src='/about-us/tem-img.png'
+									style={{ width: "90px", height: "90px" }}
+								/>
+							</IconButton>
+							<div className='user'>
+								<h3 className='name'>Otoniel Cortez </h3>
+								<p>Founder</p>
+							</div>
+							<ArrowsWrapper>
+								<Arrows
+									style={{
+										border: "1px solid #575470",
+										background: "#0f0b33",
+									}}>
+									<IconButton InstagramIcon>
+										<InstagramIcon
+											style={{
+												color: "#ff9700",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+								<Arrows
+									style={{
+										border: "1px solid #575470",
+										background: "#0f0b33",
+									}}>
+									<IconButton>
+										<TwitterIcon
+											style={{
+												color: "#ff9700",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
 
-							<Arrows
-								className='second'
-								style={{
-									border: "1px solid #575470",
-									background: "#0f0b33",
-								}}>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#ff9700", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
+								<Arrows
+									className='second'
+									style={{
+										border: "1px solid #575470",
+										background: "#0f0b33",
+									}}>
+									<IconButton InstagramIcon>
+										<LinkedInIcon
+											style={{
+												color: "#ff9700",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+							</ArrowsWrapper>
+						</GidContent>
 
-					<GidContent>
-						<IconButton>
-							<Avatar
-								src='/home/work3.jpg'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Saddam </h3>
-							<p>FMarketer</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#0f0b33",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+						<GidContent>
+							<IconButton>
+								<Avatar
+									src='/about-us/tem3.png'
+									style={{ width: "90px", height: "90px" }}
+								/>
+							</IconButton>
+							<div className='user'>
+								<h3 className='name'>Saddam </h3>
+								<p>FMarketer</p>
+							</div>
+							<ArrowsWrapper>
+								<Arrows>
+									<IconButton InstagramIcon>
+										<InstagramIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+								<Arrows>
+									<IconButton>
+										<TwitterIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
 
-							<Arrows className='second'>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
+								<Arrows className='second'>
+									<IconButton InstagramIcon>
+										<LinkedInIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+							</ArrowsWrapper>
+						</GidContent>
 
-					<GidContent>
-						<IconButton>
-							<Avatar
-								src='/home/work3.jpg'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Dimitris </h3>
-							<p>UI Designer</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#0f0b33",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+						<GidContent>
+							<IconButton>
+								<Avatar
+									src='/about-us/tem2.png'
+									style={{ width: "90px", height: "90px" }}
+								/>
+							</IconButton>
+							<div className='user'>
+								<h3 className='name'>Dimitris </h3>
+								<p>UI Designer</p>
+							</div>
+							<ArrowsWrapper>
+								<Arrows>
+									<IconButton InstagramIcon>
+										<InstagramIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+								<Arrows>
+									<IconButton>
+										<TwitterIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
 
-							<Arrows className='second'>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
+								<Arrows className='second'>
+									<IconButton InstagramIcon>
+										<LinkedInIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+							</ArrowsWrapper>
+						</GidContent>
 
-					<GidContent>
-						<IconButton>
-							<Avatar
-								src='/about-us/tem-img.png'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Fariz Al Faridli </h3>
-							<p>UI Designer</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#0f0b33",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+						<GidContent>
+							<IconButton>
+								<Avatar
+									src='/about-us/tem2.png'
+									style={{ width: "90px", height: "90px" }}
+								/>
+							</IconButton>
+							<div className='user'>
+								<h3 className='name'>Fariz Al Faridli </h3>
+								<p>UI Designer</p>
+							</div>
+							<ArrowsWrapper>
+								<Arrows>
+									<IconButton InstagramIcon>
+										<InstagramIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+								<Arrows>
+									<IconButton>
+										<TwitterIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
 
-							<Arrows className='second'>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
+								<Arrows className='second'>
+									<IconButton InstagramIcon>
+										<LinkedInIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+							</ArrowsWrapper>
+						</GidContent>
 
-					<GidContent>
-						<IconButton>
-							<Avatar
-								src='/home/work3.jpg'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Safwann </h3>
-							<p>UI Designer</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#0f0b33",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+						<GidContent>
+							<IconButton>
+								<Avatar
+									src='/about-us/tem2.png'
+									style={{ width: "90px", height: "90px" }}
+								/>
+							</IconButton>
+							<div className='user'>
+								<h3 className='name'>Safwann </h3>
+								<p>UI Designer</p>
+							</div>
+							<ArrowsWrapper>
+								<Arrows>
+									<IconButton InstagramIcon>
+										<InstagramIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+								<Arrows>
+									<IconButton>
+										<TwitterIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
 
-							<Arrows className='second'>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
+								<Arrows className='second'>
+									<IconButton InstagramIcon>
+										<LinkedInIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+							</ArrowsWrapper>
+						</GidContent>
 
-					<GidContent>
-						<IconButton>
-							<Avatar
-								src='/about-us/tem-img.png'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Faris Setiawan </h3>
-							<p>Developer</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#0f0b33",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+						<GidContent>
+							<IconButton>
+								<Avatar
+									src='/about-us/tem2.png'
+									style={{ width: "90px", height: "90px" }}
+								/>
+							</IconButton>
+							<div className='user'>
+								<h3 className='name'>Faris Setiawan </h3>
+								<p>Developer</p>
+							</div>
+							<ArrowsWrapper>
+								<Arrows>
+									<IconButton InstagramIcon>
+										<InstagramIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+								<Arrows>
+									<IconButton>
+										<TwitterIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
 
-							<Arrows className='second'>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
+								<Arrows className='second'>
+									<IconButton InstagramIcon>
+										<LinkedInIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+							</ArrowsWrapper>
+						</GidContent>
 
-					<GidContent>
-						<IconButton>
-							<Avatar
-								src='/about-us/tem-img.png'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Faris Setiawan </h3>
-							<p>Developer</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#0f0b33",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+						<GidContent>
+							<IconButton>
+								<Avatar
+									src='/about-us/tem2.png'
+									style={{ width: "90px", height: "90px" }}
+								/>
+							</IconButton>
+							<div className='user'>
+								<h3 className='name'>Faris Setiawan </h3>
+								<p>Developer</p>
+							</div>
+							<ArrowsWrapper>
+								<Arrows>
+									<IconButton InstagramIcon>
+										<InstagramIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+								<Arrows>
+									<IconButton>
+										<TwitterIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
 
-							<Arrows className='second'>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
+								<Arrows className='second'>
+									<IconButton InstagramIcon>
+										<LinkedInIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "1.7rem",
+											}}
+										/>
+									</IconButton>
+								</Arrows>
+							</ArrowsWrapper>
+						</GidContent>
 
-					<GidContent>
-						<IconButton>
-							<Avatar
-								src='/home/work3.jpg'
-								style={{ width: "90px", height: "90px" }}
-							/>
-						</IconButton>
-						<div className='user'>
-							<h3 className='name'>Fariz Al Faridli </h3>
-							<p>UI Designer</p>
-						</div>
-						<ArrowsWrapper>
-							<Arrows>
-								<IconButton InstagramIcon>
-									<InstagramIcon
-										style={{
-											color: "#0f0b33",
-											fontSize: "1.7rem",
-										}}
-									/>
-								</IconButton>
-							</Arrows>
-							<Arrows>
-								<IconButton>
-									<TwitterIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
+						<GidContent>
+							<IconButton>
+								<CustomArrows>
+									<IconButton>
+										<AddCircleOutlineIcon
+											style={{
+												color: "#0f0b33",
+												fontSize: "2.7rem",
+											}}
+										/>
+									</IconButton>
+								</CustomArrows>
+							</IconButton>
 
-							<Arrows className='second'>
-								<IconButton InstagramIcon>
-									<LinkedInIcon
-										style={{ color: "#0f0b33", fontSize: "1.7rem" }}
-									/>
-								</IconButton>
-							</Arrows>
-						</ArrowsWrapper>
-					</GidContent>
-
-					<GidContent>
-						<IconButton>
-							<CustomArrows>
-								<IconButton>
-									<AddCircleOutlineIcon
-										style={{ color: "#0f0b33", fontSize: "2.7rem" }}
-									/>
-								</IconButton>
-							</CustomArrows>
-						</IconButton>
-
-						<CustomButton>JOIN NOW</CustomButton>
-					</GidContent>
-				</GidContainer>
+							<CustomButton>JOIN NOW</CustomButton>
+						</GidContent>
+					</GidContainer>
+				</GridWrapper>
 				<WorkSection>
 					<h2>WORK WITH US</h2>
 					<div className='bottom-inner-container'>
-						<div>
-							<p>Have you decided to work on a project with us?</p>
-						</div>
+						<h1>Have you decided to work on a project with us?</h1>
 
 						<p>
 							Interested in joining our team and impacting the world?
@@ -448,7 +453,13 @@ const TopContainer = styled.div`
 
 const BottomContainer = styled.div``;
 
+const GridWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+`;
+
 const GidContainer = styled.div`
+	max-width: 1500px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 	grid-column-gap: 3.125rem;
@@ -605,12 +616,49 @@ const TeamInfo = styled.div`
 	}
 `;
 
+const WorkSection = styled.div`
+	margin-top: 5rem;
+	h2 {
+		margin-bottom: 2rem;
+		color: var(--color-secondary-second);
+	}
+
+	h1 {
+		max-width: 477px;
+		color: #0f0b33;
+
+		@media (max-width: 568px) {
+			font-size: 1.4rem;
+		}
+
+		@media (min-width: 991px) {
+			font-size: 2rem;
+		}
+	}
+
+	.bottom-inner-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	p {
+		line-height: var(--line-height);
+		max-width: 36.5625rem;
+		margin: 1rem 0 !important;
+		font-size: 1.1rem;
+		@media (max-width: 568px) {
+			min-width: 12.5rem;
+			font-size: 1rem;
+		}
+	}
+`;
+
 const CustomButton = styled.button`
 	display: block;
 	width: 148px;
-	height: 48px;
+	height: 54px;
 	font: inherit;
-	font-size: 0.9rem;
 	cursor: pointer;
 	font-weight: bold;
 	background-color: var(--color-secondary);
@@ -626,42 +674,12 @@ const CustomButton = styled.button`
 	min-width: fit-content;
 	color: white;
 	margin-top: 2rem;
-
+	@media (max-width: 568px) {
+		width: 80%;
+	}
 	&:hover {
 		background: rgba(0, 208, 176, 0.7);
 		border-color: rgba(0, 208, 176, 0.7);
-	}
-`;
-
-
-const WorkSection = styled.div`
-	h2 {
-		margin-bottom: 2rem;
-		color: var(--color-secondary-second);
-	}
-
-	.bottom-inner-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		div {
-			font-size: 1rem;
-			font-weight: 700;
-			font-size: 2rem;
-		}
-	}
-
-	p {
-		line-height: var(--line-height);
-		max-width: 36.5625rem;
-		margin: 1rem 0 !important;
-		font-size: 1.1rem;
-
-		@media (max-width: 568px) {
-			min-width: 12.5rem;
-			font-size: 1rem;
-		}
 	}
 `;
 
@@ -693,7 +711,8 @@ const AbsoluteContainer = styled.div`
 			p {
 				color: var(--color-secondary);
 				margin-bottom: 1rem;
-				font-size: 1.1rem;
+				font-size: 24px;
+				font-weight: bold;
 			}
 
 			span {

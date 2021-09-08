@@ -232,6 +232,13 @@ const ContactInfo = styled.div`
 		margin-bottom: 2rem;
 		font-weight: 700;
 
+		@media (min-width: 768px) {
+			font-size: 2rem;
+			max-width: 387px;
+			font-weight: bold;
+			margin-bottom: 2.2rem;
+		}
+
 		@media (max-width: 768px) {
 			margin-bottom: 1rem;
 		}
@@ -382,7 +389,6 @@ const AbsoluteContainer = styled.div`
 	padding: 0 9%;
 
 	.content-container {
-		max-width: 1170px;
 		height: 401px;
 		width: 100%;
 		padding: 2rem;

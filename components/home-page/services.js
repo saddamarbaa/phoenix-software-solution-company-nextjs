@@ -11,58 +11,55 @@ const Services = () => {
 		<ServicesWrapper>
 			<ServicesTop>
 				<h2>SERVICES</h2>
-				<div className='content'>
-					<div className='first'>
-						<p>Where our services add value to your product</p>
-					</div>
-					<div>
-						<p>
-							Helping companies & individuals identify key solutions for
-							their target markets. We boost their ability to create
-							products.
-						</p>
+				<div className='content-container'>
+					<h1>Where our services add value to your product</h1>
 
-						<p>
-							Our business model saves clients time and money. Don,t
-							reinvent the wheel.
-						</p>
-					</div>
+					<p>
+						Helping companies & individuals identify key solutions for
+						their target markets. We boost their ability to create
+						products. Our business model saves clients time and money.
+						Don,t reinvent the wheel.
+					</p>
 				</div>
 			</ServicesTop>
-			<ServicesGrid>
-				<div className='contain'>
-					<div className='icon'>
-						<WebIcon style={{ color: "white", fontSize: "1.7rem" }} />
+			<GridWrapper>
+				<ServicesGrid>
+					<div className='contain'>
+						<div className='icon'>
+							<WebIcon style={{ color: "white", fontSize: "1.7rem" }} />
+						</div>
+						<h3>Web Development</h3>
+						<p>
+							We build websites based on client needs and of course the
+							target market, because that,s our expertise
+						</p>
 					</div>
-					<h3>Web Development</h3>
-					<p>
-						We build websites based on client needs and of course the
-						target market, because that,s our expertise
-					</p>
-				</div>
-				<div className='contain'>
-					<div className='icon'>
-						<AppleIcon style={{ color: "white", fontSize: "1.7rem" }} />
+					<div className='contain'>
+						<div className='icon'>
+							<AppleIcon
+								style={{ color: "white", fontSize: "1.7rem" }}
+							/>
+						</div>
+						<h3>App Development</h3>
+						<p>
+							It,s undeniable, everyone now has a smartphone, and of
+							course we can also make your product app
+						</p>
 					</div>
-					<h3>App Development</h3>
-					<p>
-						It,s undeniable, everyone now has a smartphone, and of course
-						we can also make your product app
-					</p>
-				</div>
-				<div className='contain'>
-					<div className='icon'>
-						<BusinessCenterIcon
-							style={{ color: "white", fontSize: "1.7rem" }}
-						/>
+					<div className='contain'>
+						<div className='icon'>
+							<BusinessCenterIcon
+								style={{ color: "white", fontSize: "1.7rem" }}
+							/>
+						</div>
+						<h3>UI & UX Design</h3>
+						<p>
+							We are aware of the importance of design before making a
+							product, that,s why we provide our best service
+						</p>
 					</div>
-					<h3>UI & UX Design</h3>
-					<p>
-						We are aware of the importance of design before making a
-						product, that,s why we provide our best service
-					</p>
-				</div>
-			</ServicesGrid>
+				</ServicesGrid>
+			</GridWrapper>
 			<AbsoluteContainer>
 				<div className='content-container'>
 					<ImageContainer
@@ -150,54 +147,19 @@ const ServicesWrapper = styled.section`
 	}
 `;
 
-const ServicesTop = styled.div`
-	margin-bottom: 60px;
-	.first {
-		font-size: 1rem;
-		font-weight: bold;
-		font-size: 1.1rem;
-
-		@media (max-width: 768px) {
-			margin: 2rem 0 !important;
-		}
-
-		@media (min-width: 768px) {
-			margin-top: -5rem;
-		}
-	}
-
-	h2 {
-		margin-bottom: 2rem;
-		color: var(--color-secondary-second);
-	}
-
-	.content {
-		@media (min-width: 768px) {
-			display: flex;
-			align-items: center;
-		}
-	}
-
-	div {
-		p {
-			line-height: var(--line-height);
-
-			@media (min-width: 568px) {
-				min-width: 450px;
-				max-width: 500px;
-				font-size: 1.1rem;
-			}
-		}
-	}
+const GridWrapper = styled.div`
+	display: flex;
+	justify-content: center;
 `;
 
 const ServicesGrid = styled.div`
+	max-width: 1200px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(20.625rem, 1fr));
 	grid-column-gap: 50px;
 	grid-row-gap: 60px;
 
-	@media (max-width: 400px) {
+	@media (max-width: 568px) {
 		grid-template-columns: 1fr;
 	}
 
@@ -256,7 +218,6 @@ const AbsoluteContainer = styled.div`
 	padding: 0 9%;
 
 	.content-container {
-		max-width: 1170px;
 		height: 196px;
 		width: 100%;
 		padding: 2rem;
@@ -277,4 +238,42 @@ const AbsoluteContainer = styled.div`
 const ImageContainer = styled.div`
 	width: 152px;
 	height: 38px;
+`;
+
+const ServicesTop = styled.div`
+	margin-bottom: 80px;
+	h2 {
+		margin-bottom: 2rem;
+		color: var(--color-secondary-second);
+	}
+
+	h1 {
+		max-width: 477px;
+		color: #0f0b33;
+
+		@media (max-width: 568px) {
+			font-size: 1.4rem;
+		}
+
+		@media (min-width: 991px) {
+			font-size: 2rem;
+		}
+	}
+
+	.content-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	p {
+		line-height: var(--line-height);
+		max-width: 36.5625rem;
+		margin: 1rem 0 !important;
+		font-size: 1.1rem;
+		@media (max-width: 568px) {
+			min-width: 12.5rem;
+			font-size: 1rem;
+		}
+	}
 `;
