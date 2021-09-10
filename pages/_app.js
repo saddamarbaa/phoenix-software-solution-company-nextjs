@@ -8,7 +8,6 @@ import Layout from "../components/layout/layout";
 
 import ProgressBar from "@badrap/bar-of-progress";
 
-
 const progress = new ProgressBar({
 	// The size (height) of the progress bar.
 	// Numeric values get converted to px.
