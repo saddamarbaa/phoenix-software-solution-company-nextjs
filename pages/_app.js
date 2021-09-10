@@ -11,7 +11,7 @@ import ProgressBar from "@badrap/bar-of-progress";
 const progress = new ProgressBar({
 	// The size (height) of the progress bar.
 	// Numeric values get converted to px.
-	size: 4,
+	size: 2,
 
 	// Color of the progress bar.
 	// Also used for the glow around the bar.

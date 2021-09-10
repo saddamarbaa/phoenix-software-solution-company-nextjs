@@ -1,6 +1,6 @@
 /** @format */
 import styled from "styled-components";
-import Grid from "./grid";
+import Grid from "./about-grid";
 
 const Meeting = () => {
 	return (
