@@ -104,22 +104,26 @@ const FirstContainer = styled.div`
 	padding: 2rem;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 	background-color: white;
-
 	button.web {
 		min-width: 150px;
+		color: var(--color-primary);
 	}
-
 	h2 {
-		font-size: 52px;
+		margin: 1.4rem;
+		font-style: normal;
 		font-weight: 700;
-		margin: 1.2rem;
+		font-size: 52px;
+		line-height: 150%;
+		color: var(--color-primary);
 	}
 
 	p {
-		line-height: var(--line-height);
-		font-size: 1.2rem;
+		color: #6f6d85;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 150%;
 	}
-
 	.users {
 		margin-top: 2rem;
 		display: flex;
@@ -129,14 +133,13 @@ const FirstContainer = styled.div`
 		padding-top: 1rem;
 		h3 {
 			font-weight: bold;
+			color: var(--color-primary);
 		}
-
 		p {
 			font-size: 14px;
 			color: #878599;
 		}
 	}
-
 	.image {
 		display: flex;
 		align-items: center;
@@ -219,6 +222,7 @@ const ButtonsContainer = styled.div`
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 		display: block;
 		font-weight: bold;
+		color: var(--color-primary);
 		margin: 1rem 1.3rem;
 		@media (max-width: 568px) {
 			width: 80%;
@@ -258,10 +262,18 @@ const ButtonsContainer = styled.div`
 `;
 
 const WorkSection = styled.div`
+	width: 100%;
+	max-width: 1500px;
+	overflow: hidden;
+	margin: 0 auto;
 	margin-top: 5rem;
 	h2 {
 		margin-bottom: 2rem;
 		color: var(--color-secondary-second);
+
+		@media (max-width: 568px) {
+			font-size: 1.4rem;
+		}
 	}
 
 	h1 {
@@ -297,7 +309,7 @@ const WorkSection = styled.div`
 
 const CustomButton = styled.button`
 	display: block;
-	width: 148px;
+	min-width: 164px;
 	height: 54px;
 	font: inherit;
 	cursor: pointer;
@@ -307,15 +319,11 @@ const CustomButton = styled.button`
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
 	transition-duration: var(--transition-duration);
-	min-width: fit-content;
 	color: white;
-	margin-top: 2rem;
+	margin-top: 3rem;
 	@media (max-width: 568px) {
+		margin-top: 2rem;
 		width: 80%;
 	}
 	&:hover {

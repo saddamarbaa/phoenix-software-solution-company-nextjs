@@ -7,77 +7,94 @@ const Team = () => {
 	return (
 		<Wrapper>
 			<AbsoluteContainer>
-				<div className='content-container'>
-					<ImageContainer
-						style={{
-							position: "relative",
-							cursor: "pointer",
-						}}>
-						<Image
-							src='/about-us/about1.jpg'
-							alt='about-us Image'
-							layout='fill'
-							objectFit='cover'
-						/>
-					</ImageContainer>
-				</div>
+				<CustomContainer>
+					<div className='content-container'>
+						<ImageContainer
+							style={{
+								position: "relative",
+								cursor: "pointer",
+							}}>
+							<Image
+								src='/about-us/about1.jpg'
+								alt='about-us Image'
+								layout='fill'
+								objectFit='cover'
+							/>
+						</ImageContainer>
+					</div>
+				</CustomContainer>
 			</AbsoluteContainer>
 
-			<TopContainer>
-				<h2>Here We Are</h2>
-				<InnerContainer>
-					<RightContainer>
-						<p>
-							We are a remote design studio situated in Omaha that works
-							with clients worldwide. As enthusiastic designers, we take
-							pride in creating things that are simple to use,
-							accessible, engaging, and delicious. Every morning, we get
-							out of bed by making people smile. Through deliberate
-							design,
-						</p>
-					</RightContainer>
-					<LeftContainer>
-						<p>
-							We build delightful digital experiences that simplify and
-							enhance everyday living. We design enterprise software that
-							is human-centered and has the polished, snappy feel of the
-							finest consumer apps.
-						</p>
-						<p>
-							We collaborate with marketing departments at huge
-							organizations and startups to create award-winning
-							websites, ranging from Slack to Facebook.
-						</p>
-					</LeftContainer>
-				</InnerContainer>
-			</TopContainer>
-			<BottomContainer>
-				<div className='grid'>
-					<h3>100+</h3>
-					<p>Total Clients</p>
-				</div>
-				<div className='grid'>
-					<h3>50+</h3>
-					<p>Ongoing Project</p>
-				</div>
-				<div className='grid'>
-					<h3>12</h3>
-					<p>Countries</p>
-				</div>
-				<div className='grid'>
-					<h3>99+</h3>
-					<p>Good Reviews</p>
-				</div>
-			</BottomContainer>
+			<CustomContainer>
+				<TopContainer>
+					<h2>Here We Are</h2>
+					<InnerContainer>
+						<RightContainer>
+							<p>
+								We are a remote design studio situated in Omaha that
+								works with clients worldwide. As enthusiastic designers,
+								we take pride in creating things that are simple to use,
+								accessible, engaging, and delicious. Every morning, we
+								get out of bed by making people smile. Through
+								deliberate design,
+							</p>
+						</RightContainer>
+						<LeftContainer>
+							<p>
+								We build delightful digital experiences that simplify
+								and enhance everyday living. We design enterprise
+								software that is human-centered and has the polished,
+								snappy feel of the finest consumer apps.
+							</p>
+							<p>
+								We collaborate with marketing departments at huge
+								organizations and startups to create award-winning
+								websites, ranging from Slack to Facebook.
+							</p>
+						</LeftContainer>
+					</InnerContainer>
+				</TopContainer>
+				<BottomContainer>
+					<div className='grid'>
+						<h3>100+</h3>
+						<p>Total Clients</p>
+					</div>
+					<div className='grid'>
+						<h3>50+</h3>
+						<p>Ongoing Project</p>
+					</div>
+					<div className='grid'>
+						<h3>12</h3>
+						<p>Countries</p>
+					</div>
+					<div className='grid'>
+						<h3>99+</h3>
+						<p>Good Reviews</p>
+					</div>
+				</BottomContainer>
+			</CustomContainer>
 		</Wrapper>
 	);
 };
 
 export default Team;
 
+const CustomContainer = styled.div`
+	width: 100%;
+	max-width: 1500px;
+	overflow: hidden;
+	margin: 0 auto;
+`;
+
 const Wrapper = styled.div`
 	min-height: 100vh;
 	background: var(--color-primary);
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 208, 176, 0.4),
+		rgba(15, 11, 51, 0.3),
+		#0f0b33
+	);
 	padding: 5rem 9%;
 	position: relative;
 	color: white;
@@ -118,10 +135,12 @@ const AbsoluteContainer = styled.div`
 
 const ImageContainer = styled.div`
 	min-height: 100%;
-	min-width: 100%;
+	width: 100%;
+	max-width: 1170px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 	background-color: white;
 	overflow: hidden;
+	margin: 0 auto;
 `;
 
 const TopContainer = styled.div`
@@ -135,7 +154,7 @@ const TopContainer = styled.div`
 	}
 
 	h2 {
-		font-size: 24px;
+		font-size: 1.5rem;
 		font-weight: 700;
 		margin-bottom: 1.3rem;
 	}
@@ -145,6 +164,10 @@ const InnerContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+
+	p {
+		color: #b7b6c2;
+	}
 `;
 
 const RightContainer = styled.div`
@@ -173,7 +196,9 @@ const BottomContainer = styled.div`
 	h3 {
 		color: var(--color-secondary-second);
 		margin-bottom: 1rem;
-		font-size: 24;
-		font-weight: 700;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 150%;
 	}
 `;

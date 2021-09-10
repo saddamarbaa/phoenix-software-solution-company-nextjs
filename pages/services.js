@@ -10,7 +10,16 @@ function ServicesPage() {
 				<title></title>
 				<meta name='description' content='!' />
 			</Head>
-			<h1>SERVICES page </h1>
+			<h1
+				style={{
+					textAlign: "center",
+					width: "100vw",
+					height: "100vh",
+					display: "grid",
+					alignItems: "center",
+				}}>
+				TODO(Not Started This page yet)
+			</h1>
 		</Fragment>
 	);
 }

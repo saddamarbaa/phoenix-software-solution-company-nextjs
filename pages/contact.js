@@ -2,7 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
-import Contact from "../components/contact-page/contact";
+import ContactComponent from "../components/contact-page/contact";
 
 function ContactPage() {
 	return (
@@ -14,7 +14,7 @@ function ContactPage() {
 					content='CONTACT US Lets Talk For The Next Project'
 				/>
 			</Head>
-			<Contact />
+			<ContactComponent />
 		</Fragment>
 	);
 }

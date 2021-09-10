@@ -37,19 +37,18 @@ const Wrapper = styled.div`
 	font-weight: bold;
 
 	.logo {
-		width: 6.62rem;
-		height: 6rem;
+		width: 3.825rem;
+		height: 2.237rem;
 		display: flex;
 		align-items: center;
-		@media (max-width: 568px) {
-			width: 5rem;
-			height: 6rem;
-			@media (max-width: 300px) {
-				display: none;
-			}
-		}
 		img {
 			display: block;
 		}
+	}
+
+	div {
+		font-weight: 600;
+		font-size: 24px;
+		letter-spacing: -6%;
 	}
 `;

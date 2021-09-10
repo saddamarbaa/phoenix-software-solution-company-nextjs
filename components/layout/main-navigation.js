@@ -14,45 +14,47 @@ function MainNavigation() {
 	return (
 		<fragment>
 			<Header>
-				<Link href='/'>
-					<a>
-						<Logo />
-					</a>
-				</Link>
-				<nav className='show'>
-					<ul>
-						<li className='hid-ss'>
-							<Link href='/'>HOME</Link>
-						</li>
-						<li className='hid-ss'>
-							<Link href='/work'>WORK</Link>
-						</li>
-						<li className='hid-s'>
-							<Link href='/services'>SERVICES</Link>
-						</li>
-						<li className='hid-s'>
-							<Link href='/blog'>BLOG</Link>
-						</li>
-						<li className='hid-m'>
-							<Link href='/about-us'>ABOUT US</Link>
-						</li>
-						<li className='hid-m'>
-							<Link href='/contact'>CONTACT US</Link>
-						</li>
+				<CustomContainer>
+					<Link href='/'>
+						<a>
+							<Logo />
+						</a>
+					</Link>
+					<nav className='show'>
+						<ul>
+							<li className='hid-ss'>
+								<Link href='/'>HOME</Link>
+							</li>
+							<li className='hid-ss'>
+								<Link href='/work'>WORK</Link>
+							</li>
+							<li className='hid-s'>
+								<Link href='/services'>SERVICES</Link>
+							</li>
+							<li className='hid-s'>
+								<Link href='/blog'>BLOG</Link>
+							</li>
+							<li className='hid-m'>
+								<Link href='/about-us'>ABOUT US</Link>
+							</li>
+							<li className='hid-m'>
+								<Link href='/contact'>CONTACT US</Link>
+							</li>
 
-						<li className='hid-big'>
-							<MenuIcon
-								style={{
-									cursor: "pointer",
-								}}
-								onClick={() => {
-									SetBurgerMenuStatus(true);
-								}}
-							/>
-						</li>
-					</ul>
-				</nav>
-				<button>GET STARTED</button>
+							<li className='hid-big'>
+								<MenuIcon
+									style={{
+										cursor: "pointer",
+									}}
+									onClick={() => {
+										SetBurgerMenuStatus(true);
+									}}
+								/>
+							</li>
+						</ul>
+					</nav>
+					<button>GET STARTED</button>
+				</CustomContainer>
 			</Header>
 			<SideBar
 				burgerMenuStatus={burgerMenuStatus}
@@ -64,10 +66,26 @@ function MainNavigation() {
 
 export default MainNavigation;
 
+const CustomContainer = styled.div`
+	width: 100%;
+	height: 7rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1500px;
+	overflow: hidden;
+	margin: 0 auto;
+`;
+
 const Header = styled.header`
 	color: white;
-
 	background: var(--color-primary);
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 208, 176, 0.4),
+		rgba(15, 11, 51, 0.3),
+		#0f0b33
+	);
 	width: 100%;
 	height: 7rem;
 	display: flex;
@@ -77,7 +95,7 @@ const Header = styled.header`
 	width: 100vw;
 	position: sticky;
 	top: 0;
-	z-index: 99999;
+	z-index: 10;
 
 	a {
 		color: white;

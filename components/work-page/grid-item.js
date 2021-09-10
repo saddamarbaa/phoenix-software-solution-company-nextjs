@@ -104,6 +104,7 @@ const Content = styled.div`
 		margin-bottom: 2rem;
 		.title {
 			font-weight: bold;
+			color: var(--color-primary);
 		}
 		.icons {
 			color: var(--color-secondary);

@@ -49,6 +49,7 @@ export default AboutContent;
 const Wrapper = styled.div`
 	min-height: 100vh;
 	padding: 5rem 9%;
+	background: #e5e5e5;
 
 	@media (min-width: 768px) {
 		padding: 8rem 9%;
@@ -62,10 +63,18 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
+	width: 100%;
+	max-width: 1500px;
+	overflow: hidden;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
+	gap: 20px;
+
+	@media (max-width: 968px) {
+		flex-wrap: wrap;
+	}
 `;
 
 const RightContainer = styled.div`
@@ -77,17 +86,19 @@ const RightContainer = styled.div`
 	}
 
 	@media (min-width: 768px) {
-		font-weight: 700;
-		font-size: 3rem;
-		width: 550px;
-		max-width: 571px;
 		margin-right: 1rem;
+		max-width: 700px;
+		font-weight: bold;
+		font-size: 53px;
+		font-style: normal;
+		line-height: 150%;
 	}
 `;
 
 const LeftContainer = styled.div`
 	line-height: var(--line-height);
-	max-width: 500px;
+	max-width: 585px;
+	color: #6f6d85;
 
 	@media (min-width: 968px) {
 		font-size: 1.1rem;

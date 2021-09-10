@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
+import BlogComponent from "../components/blog-page/blog";
 
 function BlogPage() {
 	return (
@@ -10,7 +11,7 @@ function BlogPage() {
 				<title></title>
 				<meta name='description' content='!' />
 			</Head>
-			<h1>Blog page </h1>
+			<BlogComponent />
 		</Fragment>
 	);
 }

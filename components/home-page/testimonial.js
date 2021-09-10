@@ -7,71 +7,79 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 const TESTIMONIAL = () => {
 	return (
 		<Wrapper>
-			<TopContainer>
-				<div className='first-content'>
-					<div className='inner-container'>
-						<h2>TESTIMONIAL</h2>
-						<p className='head-co'>What Our Customers Are Saying</p>
-						<div className='testimonial'>
-							<p>30+ Testimonial</p>
+			<CustomContainer>
+				<TopContainer>
+					<div className='first-content'>
+						<div className='inner-container'>
+							<h2>TESTIMONIAL</h2>
+							<p className='head-co'>What Our Customers Are Saying</p>
+							<div className='testimonial'>
+								<p>
+									30+ <span>Testimonial</span>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div className='second-content'>
-					<h2>Web Development</h2>
-					<p className='p-s'>
-						Phoenix Software Solutions is absolutely incredible. They are
-						the most talented group of designers I,ve ever worked with or
-						encountered.
-					</p>
-					<p className='p-s'>
-						They are also very professional and complete everything to the
-						highest quality bar. A+ will be my first call for design work
-						for years to come.
-					</p>
-					<div className='user'>
-						<IconButton style={{ marginLeft: "-1rem" }}>
-							<Avatar
-								src='/home/user.png'
-								style={{ width: "70px", height: "70px" }}
-							/>
-						</IconButton>
-						<div>
-							<p style={{ fontWeight: "bold" }}>Eleuterio Prieto</p>
-							<p>CEO at prieto ministries</p>
-						</div>
-					</div>
-					<ArrowsWrapper>
-						<Arrows className='first'>
-							<ArrowBackIosIcon
-								style={{ color: "white", fontSize: "1.7rem" }}
-							/>
-						</Arrows>
-						<Arrows className='second'>
-							<ArrowForwardIosIcon
-								style={{ color: "white", fontSize: "1.7rem" }}
-							/>
-						</Arrows>
-					</ArrowsWrapper>
-				</div>
-			</TopContainer>
-			<BottomContainer>
-				<WorkSection>
-					<h2>WORK WITH US</h2>
-					<div className='bottom-inner-container'>
-						<h1>Have you decided to work on a project with us?</h1>
-
-						<p>
-							Interested in joining our team and impacting the world?
-							Reach out! We are always looking for new projects to help
-							take design to the next level!
+					<div className='second-content'>
+						<h2>Web Development</h2>
+						<p className='p-s'>
+							Phoenix Software Solutions is absolutely incredible. They
+							are the most talented group of designers I,ve ever worked
+							with or encountered.
 						</p>
+						<p className='p-s'>
+							They are also very professional and complete everything to
+							the highest quality bar. A+ will be my first call for
+							design work for years to come.
+						</p>
+						<div className='user'>
+							<IconButton style={{ marginLeft: "-1rem" }}>
+								<Avatar
+									src='/home/user.png'
+									style={{ width: "70px", height: "70px" }}
+								/>
+							</IconButton>
+							<div>
+								<p style={{ fontWeight: "bold", color: "#0f0b33" }}>
+									Eleuterio Prieto
+								</p>
+								<p style={{ color: "#878599" }}>
+									CEO at prieto ministries
+								</p>
+							</div>
+						</div>
+						<ArrowsWrapper>
+							<Arrows className='first'>
+								<ArrowBackIosIcon
+									style={{ color: "white", fontSize: "1.7rem" }}
+								/>
+							</Arrows>
+							<Arrows className='second'>
+								<ArrowForwardIosIcon
+									style={{ color: "white", fontSize: "1.7rem" }}
+								/>
+							</Arrows>
+						</ArrowsWrapper>
 					</div>
+				</TopContainer>
+				<BottomContainer>
+					<WorkSection>
+						<h2>WORK WITH US</h2>
+						<div className='bottom-inner-container'>
+							<h1>Have you decided to work on a project with us?</h1>
 
-					<CustomButton>HIRE US</CustomButton>
-				</WorkSection>
-			</BottomContainer>
+							<p>
+								Interested in joining our team and impacting the world?
+								Reach out! We are always looking for new projects to
+								help take design to the next level!
+							</p>
+						</div>
+
+						<CustomButton>HIRE US</CustomButton>
+					</WorkSection>
+				</BottomContainer>
+			</CustomContainer>
 		</Wrapper>
 	);
 };
@@ -80,16 +88,30 @@ export default TESTIMONIAL;
 
 const Wrapper = styled.div`
 	background: #e5e5e5;
-
 	padding: 5rem 9%;
+
 	@media (min-width: 768px) {
-		padding: 8rem 9%;
+		padding: 4rem 9%;
+		padding-bottom: 8rem;
 		padding-left: 0;
 	}
+
+	@media (min-width: 1500px) {
+		padding-bottom: 8rem;
+	}
+`;
+
+const CustomContainer = styled.div`
+	width: 100%;
+	max-width: 1500px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
 `;
 
 const TopContainer = styled.div`
 	margin-bottom: 5rem;
+	gap: 60px;
 	@media (min-width: 768px) {
 		display: flex;
 		justify-content: space-between;
@@ -98,7 +120,14 @@ const TopContainer = styled.div`
 	.first-content {
 		height: 220px;
 		max-width: 700px;
+
 		background: var(--color-primary);
+		background-image: linear-gradient(
+			to right,
+			rgba(15, 11, 51, 0.3),
+			rgba(0, 208, 176, 0.4),
+			#0f0b33
+		);
 		color: white;
 		display: flex;
 		flex-direction: column;
@@ -126,8 +155,10 @@ const TopContainer = styled.div`
 			margin: 1.2rem 0;
 
 			@media (min-width: 768px) {
+				font-style: normal;
+				font-weight: bold;
 				font-size: 52px;
-				font-weight: 700;
+				line-height: 150%;
 				max-width: 382px;
 				margin: 2rem 0;
 				margin-right: 1rem;
@@ -137,6 +168,11 @@ const TopContainer = styled.div`
 		.testimonial {
 			padding-left: 1rem;
 			border-left: 4px solid var(--color-secondary);
+			p {
+				span {
+					font-size: 1rem;
+				}
+			}
 
 			@media (min-width: 768px) {
 				font-weight: bold;
@@ -152,6 +188,11 @@ const TopContainer = styled.div`
 		}
 
 		h2 {
+			color: #0f0b33;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 150%;
 			margin: 1.2rem 0;
 			margin-bottom: 2rem;
 		}
@@ -162,6 +203,7 @@ const TopContainer = styled.div`
 
 		p.p-s {
 			font-size: 1.1rem;
+			color: #878599;
 			@media (max-width: 568px) {
 				min-width: 12.5rem;
 				font-size: 1rem;
@@ -229,6 +271,10 @@ const WorkSection = styled.div`
 	h2 {
 		margin-bottom: 2rem;
 		color: var(--color-secondary-second);
+
+		@media (max-width: 568px) {
+			font-size: 1.4rem;
+		}
 	}
 
 	h1 {
@@ -264,7 +310,7 @@ const WorkSection = styled.div`
 
 const CustomButton = styled.button`
 	display: block;
-	width: 148px;
+	min-width: 164px;
 	height: 54px;
 	font: inherit;
 	cursor: pointer;
@@ -274,15 +320,11 @@ const CustomButton = styled.button`
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
 	transition-duration: var(--transition-duration);
-	min-width: fit-content;
 	color: white;
-	margin-top: 2rem;
+	margin-top: 3rem;
 	@media (max-width: 568px) {
+		margin-top: 2rem;
 		width: 80%;
 	}
 	&:hover {

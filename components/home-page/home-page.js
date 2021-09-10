@@ -1,7 +1,7 @@
 /** @format */
 
 import Hero from "./hero";
-import React, { Fragment } from "react";
+import React from "react";
 import AboutUsCom from "./about-us";
 import Work from "./work";
 import TESTIMONIAL from "./testimonial";
@@ -9,13 +9,13 @@ import Services from "./services";
 
 const HomePageComponent = () => {
 	return (
-		<Fragment>
+		<React.Fragment>
 			<Hero />
 			<Services />
 			<AboutUsCom />
 			<Work />
 			<TESTIMONIAL />
-		</Fragment>
+		</React.Fragment>
 	);
 };
 

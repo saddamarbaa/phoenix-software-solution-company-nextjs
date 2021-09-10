@@ -6,16 +6,18 @@ const Work = () => {
 	return (
 		<WorkWrapper>
 			<AbsoluteContainer>
-				<div className='content-container'>
-					<h2>OUR WORK</h2>
-					<p>Our goal is to make clients happy</p>
+				<CustomContainer>
+					<div className='content-container'>
+						<h2>OUR WORK</h2>
+						<p>Our goal is to make clients happy</p>
 
-					<div className='department'>
-						<button className='main-btn'>Web Design (20)</button>
-						<button>Mobile Apps (30)</button>
-						<button>UI / UX Design (8)</button>
+						<div className='department'>
+							<button className='main-btn'>Web Design (20)</button>
+							<button>Mobile Apps (30)</button>
+							<button>UI / UX Design (8)</button>
+						</div>
 					</div>
-				</div>
+				</CustomContainer>
 			</AbsoluteContainer>
 
 			<HiddenOnBigText>
@@ -23,7 +25,7 @@ const Work = () => {
 				<p className='head-co'>Our goal is to make clients happy</p>
 			</HiddenOnBigText>
 
-			<GridWrapper>
+			<CustomContainer>
 				<GridContainer>
 					<GridItem src='/home/work1.jpg' title='Work Title' />
 					<GridItem src='/home/work2.jpg' title='Work Title' />
@@ -32,7 +34,7 @@ const Work = () => {
 					<GridItem src='/home/work3.jpg' title='Work Title' />
 					<GridItem src='/home/work5.jpg' title='Work Title' />
 				</GridContainer>
-			</GridWrapper>
+			</CustomContainer>
 
 			<CustomButton>VIEW ALL WORK</CustomButton>
 		</WorkWrapper>
@@ -53,14 +55,16 @@ const WorkWrapper = styled.section`
 	}
 
 	@media (min-width: 1169px) {
-		padding-top: 350px !important;
+		padding-top: 450px !important;
 	}
 `;
 
-const GridWrapper = styled.div`
-	display: flex;
-	justify-content: center;
-	margin-top: 3.75rem;
+const CustomContainer = styled.div`
+	width: 100%;
+	max-width: 1500px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
 `;
 
 const GridContainer = styled.div`
@@ -71,6 +75,7 @@ const GridContainer = styled.div`
 	flex-wrap: wrap;
 	column-gap: 3.125rem;
 	row-gap: 3.75rem;
+	margin: 0 auto;
 `;
 
 const AbsoluteContainer = styled.div`
@@ -86,7 +91,6 @@ const AbsoluteContainer = styled.div`
 		width: 100%;
 		padding: 2rem;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-		border-radius: 14px;
 		background-color: white;
 		display: flex;
 		flex-direction: column;
@@ -103,8 +107,12 @@ const AbsoluteContainer = styled.div`
 			font-size: 3.25rem;
 			margin-bottom: 2rem;
 			font-weight: 700;
-			max-width: 630px;
-			line-height: 1.4;
+			max-width: 600px;
+			text-align: center;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 52px;
+			line-height: 150%;
 		}
 	}
 
@@ -183,8 +191,8 @@ const HiddenOnBigText = styled.div`
 const CustomButton = styled.button`
 	margin: 0 auto;
 	display: block;
-	width: 148px;
-	height: 54px;
+	min-width: 153px;
+	height: 52px;
 	font: inherit;
 	cursor: pointer;
 	font-weight: bold;
@@ -193,14 +201,10 @@ const CustomButton = styled.button`
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
 	transition-duration: var(--transition-duration);
-	min-width: fit-content;
 	color: white;
 	margin-top: 3rem;
+	display: block;
 	@media (max-width: 568px) {
 		width: 80%;
 	}

@@ -1,15 +1,15 @@
 /** @format */
 
-import React, { fragment } from "react";
+import React from "react";
 import Landing from "./landing";
 import WorkFeed from "./work-feed";
 
 const WorkComponent = () => {
 	return (
-		<fragment>
+		<React.Fragment>
 			<Landing />
 			<WorkFeed />
-		</fragment>
+		</React.Fragment>
 	);
 };
 

@@ -1,8 +1,6 @@
 /** @format */
 
 import styled from "styled-components";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import Image from "next/image";
 import GridItem from "./grid-item";
 
 const CustomGrid = () => {

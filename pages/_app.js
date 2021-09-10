@@ -8,6 +8,7 @@ import Layout from "../components/layout/layout";
 
 import ProgressBar from "@badrap/bar-of-progress";
 
+
 const progress = new ProgressBar({
 	// The size (height) of the progress bar.
 	// Numeric values get converted to px.
@@ -15,7 +16,7 @@ const progress = new ProgressBar({
 
 	// Color of the progress bar.
 	// Also used for the glow around the bar.
-	color: "#00daff",
+	color: "#00d0b0",
 
 	// Class name used for the progress bar element.
 	className: "bar-of-progress",
