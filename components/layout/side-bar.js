@@ -1,4 +1,5 @@
 /** @format */
+
 import styled from "styled-components";
 import { IconButton } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
@@ -82,13 +83,11 @@ const SideBarWrapper = styled.div`
 	-moz-border-radius: 6px;
 	-ms-border-radius: 6px;
 	-o-border-radius: 6px;
-
 	li {
 		list-style-type: none;
 		padding: 1rem 0;
 		border-bottom: 1px solid var(--color-secondary);
 	}
-
 	a {
 		color: black;
 		font-size: 1.1;

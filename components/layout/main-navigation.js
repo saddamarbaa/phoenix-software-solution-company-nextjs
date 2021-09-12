@@ -1,5 +1,3 @@
-/** @format */
-
 import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
@@ -56,10 +54,10 @@ function MainNavigation() {
 					<button>GET STARTED</button>
 				</CustomContainer>
 			</Header>
-			{/* <SideBar
+			<SideBar
 				burgerMenuStatus={burgerMenuStatus}
 				SetBurgerMenuStatus={SetBurgerMenuStatus}
-			/> */}
+			/>
 		</fragment>
 	);
 }
@@ -73,7 +71,6 @@ const CustomContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	max-width: 87.5rem;
-	overflow: hidden;
 	margin: 0 auto;
 `;
 
@@ -96,33 +93,26 @@ const Header = styled.header`
 	position: sticky;
 	top: 0;
 	z-index: 10;
-
 	a {
 		color: white;
 	}
-
 	nav {
 		flex: 1;
-
 		@media (min-width: 568px) {
 			min-width: 20rem;
 			max-width: 40rem;
 		}
-
 		ul {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-
 			@media (max-width: 568px) {
 				justify-content: flex-end;
 			}
-
 			li {
 				margin: 0 var(--size-4);
 				transition: var(--transition-duration);
 				min-width: fit-content;
-
 				a {
 					display: block;
 					transition: var(--transition-duration);
@@ -132,7 +122,6 @@ const Header = styled.header`
 					}
 				}
 			}
-
 			li.hid-m {
 				@media (max-width: 991px) {
 					display: none;
@@ -144,20 +133,17 @@ const Header = styled.header`
 				display: none;
 			}
 		}
-
 		li.hid-ss {
 			@media (max-width: 568px) {
 				display: none;
 			}
 		}
-
 		li.hid-big {
 			@media (min-width: 568px) {
 				display: none;
 			}
 		}
 	}
-
 	button {
 		width: 148px;
 		height: 48px;
@@ -174,12 +160,10 @@ const Header = styled.header`
 		-o-border-radius: 4px;
 		transition-duration: var(--transition-duration);
 		min-width: fit-content;
-
 		&:hover,
 		&:active {
 			border: 2px solid var(--color-secondary);
 		}
-
 		@media (max-width: 568px) {
 			display: none;
 		}
