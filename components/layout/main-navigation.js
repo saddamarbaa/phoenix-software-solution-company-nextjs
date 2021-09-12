@@ -56,10 +56,10 @@ function MainNavigation() {
 					<button>GET STARTED</button>
 				</CustomContainer>
 			</Header>
-			<SideBar
+			{/* <SideBar
 				burgerMenuStatus={burgerMenuStatus}
 				SetBurgerMenuStatus={SetBurgerMenuStatus}
-			/>
+			/> */}
 		</fragment>
 	);
 }
@@ -72,7 +72,7 @@ const CustomContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1500px;
+	max-width: 87.5rem;
 	overflow: hidden;
 	margin: 0 auto;
 `;

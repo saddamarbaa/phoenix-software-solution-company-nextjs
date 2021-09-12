@@ -7,11 +7,13 @@ function Hero() {
 	return (
 		<HeroWrapper>
 			<CustomAbsoluteRoundBorders>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+				<CustomContainer>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</CustomContainer>
 			</CustomAbsoluteRoundBorders>
 
 			<CustomContainer>
@@ -130,9 +132,10 @@ const ContentContainer = styled.div`
 	}
 `;
 
+
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width);
 	overflow: hidden;
 	margin: 0 auto;
 	min-height: 43.5625rem;
@@ -145,7 +148,12 @@ const CustomContainer = styled.div`
 `;
 
 const CustomAbsoluteRoundBorders = styled.div`
-	@media (max-width: 1200px) {
+	pointer-events: none;
+	div {
+		pointer-events: none;
+	}
+
+	@media (max-width: 1100px) {
 		display: none;
 	}
 
@@ -157,7 +165,7 @@ const CustomAbsoluteRoundBorders = styled.div`
 	right: 0;
 	bottom: 0;
 	padding: 0 9%;
-	z-index: -1;
+	z-index: 11;
 
 	div {
 		min-height: 100%;

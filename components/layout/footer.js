@@ -1,4 +1,5 @@
 /** @format */
+
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
@@ -128,7 +129,12 @@ const Footer = () => {
 export default Footer;
 
 const CustomAbsoluteRoundBorders = styled.div`
-	@media (max-width: 1200px) {
+	pointer-events: none;
+	div {
+		pointer-events: none;
+	}
+
+	@media (max-width: 1100px) {
 		display: none;
 	}
 
@@ -140,7 +146,6 @@ const CustomAbsoluteRoundBorders = styled.div`
 	right: 0;
 	bottom: 0;
 	padding: 0 9%;
-
 	div {
 		min-height: 100%;
 		border-left: 1px solid rgba(255, 255, 255, 20%);
@@ -160,7 +165,6 @@ const FooterWrapper = styled.div`
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
 	);
-
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;
 	}
@@ -168,28 +172,23 @@ const FooterWrapper = styled.div`
 
 const CustomContainer = styled.footer`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width);
 	overflow: hidden;
 	margin: 0 auto;
-
 	nav {
 		display: flex;
 		justify-content: space-between;
 		width: 100vw;
 		flex-wrap: wrap;
-
 		ul {
 			flex: 1;
 			min-width: 250px;
-
 			@media (min-width: 1200px) {
 				padding-left: 1rem;
 			}
-
 			li {
 				margin-top: 2rem;
 			}
-
 			a {
 				color: white;
 				transition-duration: var(--transition-duration);
@@ -200,19 +199,16 @@ const CustomContainer = styled.footer`
 			}
 		}
 	}
-
 	#head {
 		position: absolute;
 		top: 4px;
 		left: -17px;
 		border-left: 2px solid var(--color-secondary);
 		height: 30px;
-
 		@media (max-width: 1200px) {
 			display: none;
 		}
 	}
-
 	.head {
 		position: relative;
 		font-weight: bold;
@@ -222,13 +218,11 @@ const CustomContainer = styled.footer`
 			font-size: 1.3rem;
 		}
 	}
-
 	.logo-container {
 		@media (max-width: 768px) {
 			display: none;
 		}
 	}
-
 	button {
 		width: 148px;
 		height: 48px;
@@ -264,7 +258,6 @@ const LogoImage = styled.div`
 	@media (max-width: 1200px) {
 		margin-left: 0;
 	}
-
 	.logo {
 		width: 3.825rem;
 		height: 2.237rem;

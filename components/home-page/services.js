@@ -136,7 +136,7 @@ export default Services;
 
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width);
 	overflow: hidden;
 	margin: 0 auto;
 	position: relative;
@@ -156,14 +156,16 @@ const ServicesWrapper = styled.section`
 		padding-bottom: 560px !important;
 	}
 
-	background: #e5e5e5;
+	background: white;
 `;
 
 const ServicesGrid = styled.div`
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
-	row-gap: 60px;
+	gap: 50px;
+	@media (max-width: 1169px) {
+		flex-wrap: wrap;
+	}
 `;
 
 const GidItem = styled.div`
@@ -225,6 +227,7 @@ const AbsoluteContainer = styled.div`
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 		background-color: white;
 		display: flex;
+		column-gap: 50px;
 		justify-content: space-between;
 		align-items: center;
 		margin: 0 auto;

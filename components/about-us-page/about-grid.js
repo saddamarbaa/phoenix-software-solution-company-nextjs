@@ -71,11 +71,12 @@ const GridWrapper = styled.div`
 
 const GridContainer = styled.div`
 	width: 100%;
-	max-width: 1200px;
+	max-width: var(--max-width1250);
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	column-gap: 3.125rem;
-	row-gap: 3.75rem;
-	margin: 0 auto;
+
+	@media (min-width: 568px) {
+		gap: 3rem;
+	}
 `;

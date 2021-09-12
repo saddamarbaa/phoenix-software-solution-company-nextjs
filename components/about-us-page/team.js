@@ -81,7 +81,7 @@ export default Team;
 
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width);
 	overflow: hidden;
 	margin: 0 auto;
 `;
@@ -144,6 +144,9 @@ const ImageContainer = styled.div`
 `;
 
 const TopContainer = styled.div`
+	max-width: var(--max-width1250);
+	margin: 0 auto;
+
 	p {
 		line-height: var(--line-height);
 		margin-bottom: 1.3rem;
@@ -183,6 +186,8 @@ const LeftContainer = styled.div`
 `;
 
 const BottomContainer = styled.div`
+	max-width: var(--max-width1250);
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;

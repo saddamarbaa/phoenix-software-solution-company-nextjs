@@ -39,13 +39,14 @@ export default GridItem;
 const Wrapper = styled.div`
 	height: 25rem;
 	width: 18.75rem;
+	margin-right: 3rem;
 
 	.design {
 		color: #878599;
 	}
 
 	@media (max-width: 568px) {
-		width: 100%;
+		min-width: 100%;
 	}
 `;
 
@@ -82,7 +83,7 @@ const ImageContainer = styled.div`
 	max-width: 48rem;
 	max-height: 18.188rem;
 	overflow: hidden;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	img {
 		object-fit: cover;
 		display: block;
@@ -101,7 +102,7 @@ const Content = styled.div`
 		align-items: center;
 	}
 	.content {
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 		.title {
 			font-weight: bold;
 			color: var(--color-primary);

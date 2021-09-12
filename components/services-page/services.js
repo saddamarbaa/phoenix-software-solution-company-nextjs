@@ -1,9 +1,16 @@
 /** @format */
 
-import styled from "styled-components";
+import Landing from "./landing";
+import ServicesOption from "./services-option";
+import { Fragment } from "react";
 
 const ServicesComponent = () => {
-	return <div></div>;
+	return (
+		<Fragment>
+			<Landing />
+			<ServicesOption />
+		</Fragment>
+	);
 };
 
 export default ServicesComponent;

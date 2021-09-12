@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
+import ServicesComponent from "../components/services-page/services";
 
 function ServicesPage() {
 	return (
@@ -10,16 +11,7 @@ function ServicesPage() {
 				<title></title>
 				<meta name='description' content='!' />
 			</Head>
-			<h1
-				style={{
-					textAlign: "center",
-					width: "100vw",
-					height: "100vh",
-					display: "grid",
-					alignItems: "center",
-				}}>
-				TODO(Not Started This page yet)
-			</h1>
+			<ServicesComponent />
 		</Fragment>
 	);
 }

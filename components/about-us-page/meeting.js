@@ -119,7 +119,10 @@ const TopContainer = styled.div`
 	}
 `;
 
-const BottomContainer = styled.div``;
+const BottomContainer = styled.div`
+	max-width: var(--max-width1250);
+	margin: 0 auto;
+`;
 
 const TeamInfo = styled.div`
 	padding: 1rem 0;
@@ -183,7 +186,10 @@ const TeamInfo = styled.div`
 `;
 
 const WorkSection = styled.div`
-	margin-top: 5rem;
+	@media (min-width: 568px) {
+		margin-top: 5rem;
+	}
+
 	h2 {
 		margin-bottom: 2rem;
 		color: var(--color-secondary-second);

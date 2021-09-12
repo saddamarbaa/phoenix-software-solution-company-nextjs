@@ -17,10 +17,9 @@ export default Landing;
 
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width);
 	overflow: hidden;
 	margin: 0 auto;
-
 	display: grid;
 	place-items: center;
 	text-align: center;

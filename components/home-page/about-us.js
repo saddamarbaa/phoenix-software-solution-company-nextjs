@@ -103,7 +103,7 @@ const AboutAsWrapper = styled.div`
 		padding: 8rem 9% !important;
 	}
 	@media (min-width: 1169px) {
-		padding-top: 560px !important;
+		padding-top: 500px !important;
 		padding-bottom: 450px !important;
 	}
 
@@ -112,7 +112,7 @@ const AboutAsWrapper = styled.div`
 
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width);
 	overflow: hidden;
 	margin: 0 auto;
 	position: relative;

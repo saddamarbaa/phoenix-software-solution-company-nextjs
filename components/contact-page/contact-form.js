@@ -160,7 +160,7 @@ const ContactContainer = styled.div`
 
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width1250);
 	overflow: hidden;
 	margin: 0 auto;
 `;

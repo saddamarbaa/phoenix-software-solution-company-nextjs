@@ -103,7 +103,7 @@ const Wrapper = styled.div`
 
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: 78.125rem;
 	overflow: hidden;
 	margin: 0 auto;
 	position: relative;

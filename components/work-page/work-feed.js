@@ -9,43 +9,45 @@ const WorkFeed = () => {
 	return (
 		<WorkWrapper>
 			<AbsoluteContainer>
-				<FirstContainer>
-					<ButtonsContainer>
-						<button className='web'>Web Design </button>
-					</ButtonsContainer>
-					<h2>Dashboard for NFT marketplace </h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
-						congue sed aliquet malesuada non placerat eget. Fermentum{" "}
-					</p>
-					<CustomButton>VIEW DETAIL</CustomButton>
-					<div className='users'>
-						<div className='image'>
-							<Avatar src='/work/work1.png' />
-							<Avatar src='/work/work2.png' />
-							<Avatar src='/work/work3.png' />
+				<CustomContainer>
+					<FirstContainer>
+						<ButtonsContainer>
+							<button className='web'>Web Design </button>
+						</ButtonsContainer>
+						<h2>Dashboard for NFT marketplace </h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
+							congue sed aliquet malesuada non placerat eget. Fermentum{" "}
+						</p>
+						<CustomButton>VIEW DETAIL</CustomButton>
+						<div className='users'>
+							<div className='image'>
+								<Avatar src='/work/work1.png' />
+								<Avatar src='/work/work2.png' />
+								<Avatar src='/work/work3.png' />
+							</div>
+							<div className='details'>
+								<h3>3 Worker</h3>
+								<p>Onky, Faris, Ari</p>
+							</div>
 						</div>
-						<div className='details'>
-							<h3>3 Worker</h3>
-							<p>Onky, Faris, Ari</p>
-						</div>
-					</div>
-				</FirstContainer>
+					</FirstContainer>
 
-				<SecondContainer>
-					<AbsoluteImageContainer
-						style={{
-							position: "relative",
-							cursor: "pointer",
-						}}>
-						<Image
-							src='/work/disbord.jpg'
-							alt='dashborad Image'
-							layout='fill'
-							objectFit='cover'
-						/>
-					</AbsoluteImageContainer>
-				</SecondContainer>
+					<SecondContainer>
+						<AbsoluteImageContainer
+							style={{
+								position: "relative",
+								cursor: "pointer",
+							}}>
+							<Image
+								src='/work/disbord.jpg'
+								alt='dashborad Image'
+								layout='fill'
+								objectFit='cover'
+							/>
+						</AbsoluteImageContainer>
+					</SecondContainer>
+				</CustomContainer>
 			</AbsoluteContainer>
 
 			<HiddenOnBigText>
@@ -116,7 +118,6 @@ const FirstContainer = styled.div`
 		line-height: 150%;
 		color: var(--color-primary);
 	}
-
 	p {
 		color: #6f6d85;
 		font-style: normal;
@@ -165,12 +166,19 @@ const AbsoluteContainer = styled.div`
 	left: 0;
 	right: 0;
 	min-height: 600px;
-	display: flex;
-	justify-content: center;
 
 	@media (max-width: 1169px) {
 		display: none;
 	}
+`;
+
+const CustomContainer = styled.div`
+	width: 100%;
+	max-width: var(--max-width);
+	overflow: hidden;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 `;
 
 const HiddenOnBigText = styled.div`
@@ -204,6 +212,10 @@ const ButtonsWrapper = styled.div`
 	margin-bottom: 4rem;
 	display: flex;
 	justify-content: center;
+
+	@media (min-width: 992px) {
+		margin-bottom: 7rem;
+	}
 `;
 
 const ButtonsContainer = styled.div`
@@ -263,7 +275,7 @@ const ButtonsContainer = styled.div`
 
 const WorkSection = styled.div`
 	width: 100%;
-	max-width: 1500px;
+	max-width: var(--max-width1250);
 	overflow: hidden;
 	margin: 0 auto;
 	margin-top: 5rem;
@@ -296,6 +308,7 @@ const WorkSection = styled.div`
 		flex-wrap: wrap;
 	}
 	p {
+		color: #6f6d85;
 		line-height: var(--line-height);
 		max-width: 36.5625rem;
 		margin: 1rem 0 !important;
