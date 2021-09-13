@@ -8,7 +8,7 @@ import { memo } from "react";
 const BlogDetailComponent = () => {
 	return (
 		<fragment>
-			<Landing />
+			<BlogLanding />
 		</fragment>
 	);
 };
