@@ -1,6 +1,7 @@
 /** @format */
 import styled from "styled-components";
 import Grid from "./about-grid";
+import { memo } from "react";
 
 const Meeting = () => {
 	return (
@@ -74,7 +75,7 @@ const Meeting = () => {
 	);
 };
 
-export default Meeting;
+export default memo(Meeting);
 
 const CustomContainer = styled.div`
 	width: 100%;

@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import GridItem from "./grid-item";
+import { memo } from "react";
 
 const CustomGrid = () => {
 	return (
@@ -33,7 +34,7 @@ const CustomGrid = () => {
 	);
 };
 
-export default CustomGrid;
+export default memo(CustomGrid);
 
 const GridWrapper = styled.div`
 	display: flex;

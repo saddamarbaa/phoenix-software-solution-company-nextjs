@@ -2,10 +2,13 @@
 
 import styled from "styled-components";
 import Image from "next/image";
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
+import { memo } from "react";
 
 const AboutContent = () => {
 	return (
 		<Wrapper>
+			<AbsoluteRoundBordersComponent />
 			<Container>
 				<RightContainer>
 					<h2>
@@ -44,13 +47,14 @@ const AboutContent = () => {
 	);
 };
 
-export default AboutContent;
+export default memo(AboutContent);
 
 const Wrapper = styled.div`
 	min-height: 100vh;
 	padding: 5rem 9%;
 	background: #e5e5e5;
-
+	width: 100vw;
+	position: relative;
 	@media (min-width: 768px) {
 		padding: 8rem 9%;
 	}

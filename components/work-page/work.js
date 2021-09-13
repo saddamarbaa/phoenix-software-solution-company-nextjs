@@ -3,6 +3,7 @@
 import React from "react";
 import Landing from "./landing";
 import WorkFeed from "./work-feed";
+import { memo } from "react";
 
 const WorkComponent = () => {
 	return (
@@ -13,4 +14,4 @@ const WorkComponent = () => {
 	);
 };
 
-export default WorkComponent;
+export default memo(WorkComponent);

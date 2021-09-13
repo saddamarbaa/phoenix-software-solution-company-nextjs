@@ -6,6 +6,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 import CallIcon from "@material-ui/icons/Call";
 import HomeIcon from "@material-ui/icons/Home";
+import { memo } from "react";
 
 const ContactFormComponent = () => {
 	return (
@@ -144,7 +145,7 @@ const ContactFormComponent = () => {
 	);
 };
 
-export default ContactFormComponent;
+export default memo(ContactFormComponent);
 
 const Wrapper = styled.div`
 	width: 100%;

@@ -8,8 +8,11 @@ function ServicesPage() {
 	return (
 		<Fragment>
 			<Head>
-				<title></title>
-				<meta name='description' content='!' />
+				<title>SERVICES</title>
+				<meta
+					name='description'
+					content='We provide an injection of creative value to build a powerful yet beautiful experience.'
+				/>
 			</Head>
 			<ServicesComponent />
 		</Fragment>

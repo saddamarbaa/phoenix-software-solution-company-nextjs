@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { Avatar } from "@material-ui/core";
 import CustomGrid from "./grid";
+import { memo } from "react";
 
 const WorkFeed = () => {
 	return (
@@ -83,7 +84,7 @@ const WorkFeed = () => {
 	);
 };
 
-export default WorkFeed;
+export default memo(WorkFeed);
 
 const WorkWrapper = styled.section`
 	position: relative;

@@ -6,6 +6,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import { memo } from "react";
 
 const GridItem = (props) => {
 	const { src, title, name, founder, join } = props;
@@ -98,7 +99,7 @@ const GridItem = (props) => {
 	}
 };
 
-export default GridItem;
+export default memo(GridItem);
 
 const Wrapper = styled.div`
 	height: 25rem;

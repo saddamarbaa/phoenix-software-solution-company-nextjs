@@ -1,6 +1,7 @@
 /** @format */
 import styled from "styled-components";
 import GridItem from "./blog-grid-item";
+import { memo } from "react";
 
 const BlogGrid = () => {
 	return (
@@ -49,7 +50,7 @@ const BlogGrid = () => {
 	);
 };
 
-export default BlogGrid;
+export default memo(BlogGrid);
 
 const GridWrapper = styled.div`
 	width: 100%;

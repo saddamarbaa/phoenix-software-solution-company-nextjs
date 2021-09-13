@@ -8,8 +8,11 @@ function BlogPage() {
 	return (
 		<Fragment>
 			<Head>
-				<title></title>
-				<meta name='description' content='!' />
+				<title>blog</title>
+				<meta
+					name='description'
+					content='Collection of articles from our workers'
+				/>
 			</Head>
 			<BlogComponent />
 		</Fragment>

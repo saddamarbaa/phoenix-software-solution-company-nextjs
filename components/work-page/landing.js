@@ -1,10 +1,13 @@
 /** @format */
 
 import styled from "styled-components";
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
+import { memo } from "react";
 
 const Landing = () => {
 	return (
 		<Wrapper>
+			<AbsoluteRoundBordersComponent />
 			<CustomContainer>
 				<h2>OUR WORK</h2>
 				<p>Our latest client works</p>
@@ -13,7 +16,7 @@ const Landing = () => {
 	);
 };
 
-export default Landing;
+export default memo(Landing);
 
 const CustomContainer = styled.div`
 	width: 100%;
@@ -63,6 +66,9 @@ const Wrapper = styled.div`
 	place-items: center;
 	text-align: center;
 	display: none;
+	position: relative;
+	width: 100vw;
+
 	@media (min-width: 1169px) {
 		display: grid;
 		padding-bottom: 400px !important;

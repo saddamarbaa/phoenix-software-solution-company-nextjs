@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import Image from "next/image";
+import { memo } from "react";
 
 const Team = () => {
 	return (
@@ -77,13 +78,14 @@ const Team = () => {
 	);
 };
 
-export default Team;
+export default memo(Team);
 
 const CustomContainer = styled.div`
 	width: 100%;
 	max-width: var(--max-width);
 	overflow: hidden;
 	margin: 0 auto;
+	position: relative;
 `;
 
 const Wrapper = styled.div`

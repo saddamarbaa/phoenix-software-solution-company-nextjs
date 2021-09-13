@@ -3,6 +3,7 @@
 import React, { Fragment } from "react";
 import AllBlog from "./all-blog";
 import Welcoming from "./welcoming";
+import { memo } from "react";
 
 const BlogComponent = () => {
 	return (
@@ -13,4 +14,4 @@ const BlogComponent = () => {
 	);
 };
 
-export default BlogComponent;
+export default memo(BlogComponent);

@@ -1,10 +1,13 @@
 /** @format */
 
 import styled from "styled-components";
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
+import { memo } from "react";
 
 const ContactLanding = () => {
 	return (
 		<Wrapper>
+			<AbsoluteRoundBordersComponent />
 			<TopWrapper>
 				<CustomContainer>
 					<Container>
@@ -17,10 +20,11 @@ const ContactLanding = () => {
 	);
 };
 
-export default ContactLanding;
+export default memo(ContactLanding);
 
 const Wrapper = styled.div`
 	width: 100vw;
+	position: relative;
 `;
 
 const CustomContainer = styled.div`

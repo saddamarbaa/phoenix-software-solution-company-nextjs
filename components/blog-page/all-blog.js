@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import BlogGrid from "./blog-grid";
+import { memo } from "react";
 
 const AllBlog = () => {
 	return (
@@ -73,7 +74,7 @@ const AllBlog = () => {
 	);
 };
 
-export default AllBlog;
+export default memo(AllBlog);
 
 const CustomContainer = styled.div`
 	width: 100%;

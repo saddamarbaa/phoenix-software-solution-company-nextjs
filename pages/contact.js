@@ -8,10 +8,10 @@ function ContactPage() {
 	return (
 		<Fragment>
 			<Head>
-				<title>Contact </title>
+				<title>Contact us</title>
 				<meta
 					name='description'
-					content='CONTACT US Lets Talk For The Next Project'
+					content='Contact us Lets Talk For The Next Project'
 				/>
 			</Head>
 			<ContactComponent />

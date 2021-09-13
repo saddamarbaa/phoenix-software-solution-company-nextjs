@@ -53,6 +53,13 @@ const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus }) => {
 					}}>
 					<Link href='/contact'>Contact us</Link>
 				</li>
+
+				<li
+					onClick={() => {
+						SetBurgerMenuStatus(false);
+					}}>
+					<Link href='/hir-us'>Hire Us</Link>
+				</li>
 			</ul>
 		</SideBarWrapper>
 	);

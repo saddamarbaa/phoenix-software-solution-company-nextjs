@@ -4,6 +4,7 @@ import React, { fragment } from "react";
 import AboutContent from "./about-content";
 import Team from "./team";
 import Meeting from "./meeting";
+import { memo } from "react";
 
 const AboutUsComponent = () => {
 	return (
@@ -15,4 +16,4 @@ const AboutUsComponent = () => {
 	);
 };
 
-export default AboutUsComponent;
+export default memo(AboutUsComponent);

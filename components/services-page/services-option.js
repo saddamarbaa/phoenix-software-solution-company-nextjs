@@ -4,6 +4,7 @@ import styled from "styled-components";
 import UIButton from "../ui/button";
 import Image from "next/image";
 import GridItem from "../work-page/grid-item";
+import { memo } from "react";
 
 import UIParagraph from "../ui/paragraph";
 
@@ -74,7 +75,7 @@ const ServicesOption = () => {
 	);
 };
 
-export default ServicesOption;
+export default memo(ServicesOption);
 
 const Wrapper = styled.div`
 	width: 100vw;

@@ -4,148 +4,162 @@ import styled from "styled-components";
 import UIButton from "../ui/button";
 import Image from "next/image";
 import GridItem from "../work-page/grid-item";
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
+import { memo } from "react";
 
 import UIParagraph from "../ui/paragraph";
 
 const Landing = () => {
 	return (
-		<Wrapper>
-			<FirstContainer>
-				<CustomContainer>
-					<CustomHeading1>SERVICES</CustomHeading1>
-					<CustomHeading2>
-						We provide an injection of creative value to build a powerful
-						yet beautiful experience.
-					</CustomHeading2>
-				</CustomContainer>
-			</FirstContainer>
+		<>
+			<FirstWrapper>
+				{" "}
+				<AbsoluteRoundBordersComponent />{" "}
+			</FirstWrapper>
+			<Wrapper>
+				<FirstContainer>
+					<CustomContainer>
+						<CustomHeading1>SERVICES</CustomHeading1>
+						<CustomHeading2>
+							We provide an injection of creative value to build a
+							powerful yet beautiful experience.
+						</CustomHeading2>
+					</CustomContainer>
+				</FirstContainer>
 
-			<SecondContainer>
-				<LeftContent>
-					<Heading1>WEB DEVELOPMENT</Heading1>
-					<Heading2>
-						We build websites based on client needs and of course the
-						target market, because that&apos;s our expertise
-					</Heading2>
+				<SecondContainer>
+					<LeftContent>
+						<Heading1>WEB DEVELOPMENT</Heading1>
+						<Heading2>
+							We build websites based on client needs and of course the
+							target market, because that&apos;s our expertise
+						</Heading2>
 
-					<UIParagraph>
-						We create delightful digital experiences that make life
-						simpler and more enjoyable. We create enterprise software that
-						has the polished, snappy feel of the best consumer apps.
-					</UIParagraph>
+						<UIParagraph>
+							We create delightful digital experiences that make life
+							simpler and more enjoyable. We create enterprise software
+							that has the polished, snappy feel of the best consumer
+							apps.
+						</UIParagraph>
 
-					<UIParagraph>
-						From Slack to Facebook, we team up with marketing departments
-						of large companies and startups to deliver award‑winning
-						websites.
-					</UIParagraph>
+						<UIParagraph>
+							From Slack to Facebook, we team up with marketing
+							departments of large companies and startups to deliver
+							award‑winning websites.
+						</UIParagraph>
 
-					<HiddenImageContainer>
-						<Image
-							src='/services/services1.jpg'
-							alt='services Image'
-							width={500}
-							height={400}
-							layout='responsive'
-						/>
-					</HiddenImageContainer>
+						<HiddenImageContainer>
+							<Image
+								src='/services/services1.jpg'
+								alt='services Image'
+								width={500}
+								height={400}
+								layout='responsive'
+							/>
+						</HiddenImageContainer>
 
-					<div className='hid-s'>
-						<UIButton>HIRE US</UIButton>
-					</div>
-				</LeftContent>
-				<RightContent>
-					<ImageContainer
-						style={{
-							position: "relative",
-							cursor: "pointer",
-						}}>
-						<Image
-							src='/services/services1.jpg'
-							alt='services Image'
-							layout='fill'
-							objectFit='cover'
-						/>
-					</ImageContainer>
+						<div className='hid-s'>
+							<UIButton>HIRE US</UIButton>
+						</div>
+					</LeftContent>
+					<RightContent>
+						<ImageContainer
+							style={{
+								position: "relative",
+								cursor: "pointer",
+							}}>
+							<Image
+								src='/services/services1.jpg'
+								alt='services Image'
+								layout='fill'
+								objectFit='cover'
+							/>
+						</ImageContainer>
 
-					<AbsoluteContainer></AbsoluteContainer>
-				</RightContent>
-			</SecondContainer>
+						<AbsoluteContainer></AbsoluteContainer>
+					</RightContent>
+				</SecondContainer>
 
-			<ThirdContainer>
-				<GridContainer>
-					<GridItem src='/services/services2.jpg' title='Work Title' />
-					<GridItem src='/services/services3.jpg' title='Work Title' />
-					<GridItem src='/services/services4.jpg' title='Work Title' />
-				</GridContainer>
-			</ThirdContainer>
+				<ThirdContainer>
+					<GridContainer>
+						<GridItem src='/services/services2.jpg' title='Work Title' />
+						<GridItem src='/services/services3.jpg' title='Work Title' />
+						<GridItem src='/services/services4.jpg' title='Work Title' />
+					</GridContainer>
+				</ThirdContainer>
 
-			<ForthContainer>
-				<ForthLeftContent>
-					<ForthImageContainer
-						style={{
-							position: "relative",
-							cursor: "pointer",
-						}}>
-						<Image
-							src='/services/services5.jpg'
-							alt='services Image'
-							layout='fill'
-							objectFit='cover'
-						/>
-					</ForthImageContainer>
-					<ForthContainerAbsoluteContainer></ForthContainerAbsoluteContainer>
-				</ForthLeftContent>
+				<ForthContainer>
+					<ForthLeftContent>
+						<ForthImageContainer
+							style={{
+								position: "relative",
+								cursor: "pointer",
+							}}>
+							<Image
+								src='/services/services5.jpg'
+								alt='services Image'
+								layout='fill'
+								objectFit='cover'
+							/>
+						</ForthImageContainer>
+						<ForthContainerAbsoluteContainer></ForthContainerAbsoluteContainer>
+					</ForthLeftContent>
 
-				<ForthRightContent>
-					<Heading1>UI & UX DESIGN</Heading1>
-					<Heading2>
-						We are aware of the importance of design before making a
-						product, that&apos;s why we provide our best service
-					</Heading2>
+					<ForthRightContent>
+						<Heading1>UI & UX DESIGN</Heading1>
+						<Heading2>
+							We are aware of the importance of design before making a
+							product, that&apos;s why we provide our best service
+						</Heading2>
 
-					<UIParagraph>
-						We create delightful digital experiences that make life
-						simpler and more enjoyable. We create enterprise software that
-						has the polished, snappy feel of the best consumer apps. From
-						Slack to Facebook, we team up with marketing departments of
-						large companies and startups to deliver award‑winning
-						websites.
-					</UIParagraph>
+						<UIParagraph>
+							We create delightful digital experiences that make life
+							simpler and more enjoyable. We create enterprise software
+							that has the polished, snappy feel of the best consumer
+							apps. From Slack to Facebook, we team up with marketing
+							departments of large companies and startups to deliver
+							award‑winning websites.
+						</UIParagraph>
 
-					<UIParagraph>
-						From Slack to Facebook, we team up with marketing departments
-						of large companies and startups to deliver award‑winning
-						websites.
-					</UIParagraph>
+						<UIParagraph>
+							From Slack to Facebook, we team up with marketing
+							departments of large companies and startups to deliver
+							award‑winning websites.
+						</UIParagraph>
 
-					<HiddenImageContainer>
-						<Image
-							src='/services/services5.jpg'
-							alt='services Image'
-							width={500}
-							height={400}
-							layout='responsive'
-						/>
-					</HiddenImageContainer>
-					<div className='hid-s'>
-						<UIButton>HIRE US</UIButton>
-					</div>
-				</ForthRightContent>
-			</ForthContainer>
+						<HiddenImageContainer>
+							<Image
+								src='/services/services5.jpg'
+								alt='services Image'
+								width={500}
+								height={400}
+								layout='responsive'
+							/>
+						</HiddenImageContainer>
+						<div className='hid-s'>
+							<UIButton>HIRE US</UIButton>
+						</div>
+					</ForthRightContent>
+				</ForthContainer>
 
-			<FifthContainer>
-				<GridContainer>
-					<GridItem src='/services/servcies17.jpg' title='Work Title' />
-					<GridItem src='/services/services6.jpg' title='Work Title' />
-					<GridItem src='/services/services7.jpg' title='Work Title' />
-				</GridContainer>
-			</FifthContainer>
-		</Wrapper>
+				<FifthContainer>
+					<GridContainer>
+						<GridItem src='/services/servcies17.jpg' title='Work Title' />
+						<GridItem src='/services/services6.jpg' title='Work Title' />
+						<GridItem src='/services/services7.jpg' title='Work Title' />
+					</GridContainer>
+				</FifthContainer>
+			</Wrapper>
+		</>
 	);
 };
 
-export default Landing;
+export default memo(Landing);
+
+const FirstWrapper = styled.div`
+	width: 100vw;
+	position: relative;
+`;
 
 const CustomContainer = styled.div`
 	width: 100%;
@@ -158,6 +172,8 @@ const Wrapper = styled.div`
 	min-height: 100vh;
 	background: #e5e5e5;
 	padding: 5rem 9%;
+	width: 100vw;
+	position: relative;
 
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;

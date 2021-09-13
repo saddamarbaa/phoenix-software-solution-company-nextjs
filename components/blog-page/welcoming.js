@@ -1,10 +1,13 @@
 /** @format */
 
 import styled from "styled-components";
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
+import { memo } from "react";
 
 const Welcoming = () => {
 	return (
 		<Wrapper>
+			<AbsoluteRoundBordersComponent />
 			<CustomContainer>
 				<AbsoluteContainer>
 					<div className='content-container'>
@@ -38,7 +41,7 @@ const Welcoming = () => {
 	);
 };
 
-export default Welcoming;
+export default memo(Welcoming);
 
 const CustomContainer = styled.div`
 	width: 100%;

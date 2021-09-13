@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Image from "next/image";
+import { memo } from "react";
 
 const GridItem = ({ src, title }) => {
 	return (
@@ -34,7 +35,7 @@ const GridItem = ({ src, title }) => {
 	);
 };
 
-export default GridItem;
+export default memo(GridItem);
 
 const Wrapper = styled.div`
 	height: 25rem;

@@ -1,3 +1,5 @@
+/** @format */
+
 import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
@@ -38,6 +40,14 @@ function MainNavigation() {
 							<li className='hid-m'>
 								<Link href='/contact'>CONTACT US</Link>
 							</li>
+
+							<li className='hid-m'>
+								<Link href='/hir-us'>Hire Us</Link>
+							</li>
+
+							{/* <li className='hid-m'>
+								<Link href='/detail-blog'>Hire Us</Link>
+							</li> */}
 
 							<li className='hid-big'>
 								<MenuIcon

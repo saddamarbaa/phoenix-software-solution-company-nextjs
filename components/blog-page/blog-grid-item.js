@@ -2,8 +2,8 @@
 
 import styled from "styled-components";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import Image from "next/image";
 import { Avatar, IconButton } from "@material-ui/core";
+import { memo } from "react";
 
 const GridItem = ({ src, title, name, authorImageSrc }) => {
 	return (
@@ -33,7 +33,7 @@ const GridItem = ({ src, title, name, authorImageSrc }) => {
 	);
 };
 
-export default GridItem;
+export default memo(GridItem);
 
 const Wrapper = styled.div`
 	height: 27.5rem;

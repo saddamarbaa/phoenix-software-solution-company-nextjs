@@ -8,8 +8,8 @@ function WorkPage() {
 	return (
 		<Fragment>
 			<Head>
-				<title></title>
-				<meta name='description' content='!' />
+				<title> works</title>
+				<meta name='description' content='Our latest client works' />
 			</Head>
 			<WorkComponent />
 		</Fragment>

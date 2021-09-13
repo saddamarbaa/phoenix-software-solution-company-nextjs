@@ -3,6 +3,7 @@
 import Landing from "./landing";
 import ServicesOption from "./services-option";
 import { Fragment } from "react";
+import { memo } from "react";
 
 const ServicesComponent = () => {
 	return (
@@ -13,4 +14,4 @@ const ServicesComponent = () => {
 	);
 };
 
-export default ServicesComponent;
+export default memo(ServicesComponent);

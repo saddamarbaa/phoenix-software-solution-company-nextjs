@@ -2,19 +2,13 @@
 
 import Image from "next/image";
 import styled from "styled-components";
+import { memo } from "react";
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 function Hero() {
 	return (
 		<HeroWrapper>
-			<CustomAbsoluteRoundBorders>
-				<CustomContainer>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-				</CustomContainer>
-			</CustomAbsoluteRoundBorders>
+			<AbsoluteRoundBordersComponent />
 
 			<CustomContainer>
 				<ContentContainer>
@@ -68,7 +62,7 @@ function Hero() {
 	);
 }
 
-export default Hero;
+export default memo(Hero);
 
 const HeroWrapper = styled.div`
 	position: relative;
@@ -82,14 +76,11 @@ const HeroWrapper = styled.div`
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
 	);
-
 	padding: 5rem 9%;
-
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;
 		padding-right: 0;
 	}
-
 	@media (min-width: 1169px) {
 		padding-bottom: 300px !important;
 	}
@@ -99,7 +90,6 @@ const ContentContainer = styled.div`
 	flex: 1;
 	max-width: 36.1875rem;
 	margin-right: 2rem;
-
 	h1 {
 		font-family: Poppins;
 		font-style: normal;
@@ -117,7 +107,6 @@ const ContentContainer = styled.div`
 			color: var(--color-secondary);
 		}
 	}
-
 	p {
 		margin: 1rem 0;
 		font-style: normal;
@@ -126,12 +115,10 @@ const ContentContainer = styled.div`
 		line-height: var(--line-height);
 		font-size: 1.1rem;
 	}
-
 	@media (max-width: 768px) {
 		max-width: 100vw;
 	}
 `;
-
 
 const CustomContainer = styled.div`
 	width: 100%;
@@ -147,32 +134,6 @@ const CustomContainer = styled.div`
 	}
 `;
 
-const CustomAbsoluteRoundBorders = styled.div`
-	pointer-events: none;
-	div {
-		pointer-events: none;
-	}
-
-	@media (max-width: 1100px) {
-		display: none;
-	}
-
-	display: flex;
-	justify-content: space-between;
-	position: absolute;
-	top: -500px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 0 9%;
-	z-index: 11;
-
-	div {
-		min-height: 100%;
-		border-left: 1px solid rgba(255, 255, 255, 20%);
-	}
-`;
-
 const ImageContainer = styled.div`
 	flex: 1;
 	width: 40.5rem;
@@ -180,7 +141,6 @@ const ImageContainer = styled.div`
 	height: 43.563rem;
 	max-height: 43.5625rem;
 	overflow: hidden;
-
 	img {
 		display: block;
 	}
@@ -195,11 +155,9 @@ const JobsContain = styled.div`
 	justify-content: space-between;
 	max-width: 400px;
 	min-width: 300px;
-
 	@media (max-width: 568px) {
 		display: none;
 	}
-
 	.job-success {
 		border-left: 2px solid var(--color-secondary);
 		font-weight: bold;

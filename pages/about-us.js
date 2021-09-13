@@ -8,8 +8,11 @@ function AboutUsPage() {
 	return (
 		<Fragment>
 			<Head>
-				<title></title>
-				<meta name='description' content='!' />
+				<title>About Software Agency</title>
+				<meta
+					name='description'
+					content='We are a remote design agency based in Omaha, Nebraska, working with clients around the world. As passionate designers, we love building products that are easy to use, accessible, engaging, and delightful.'
+				/>
 			</Head>
 			<AboutUsComponent />
 		</Fragment>

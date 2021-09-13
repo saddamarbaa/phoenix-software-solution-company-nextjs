@@ -1,6 +1,7 @@
 /** @format */
 import styled from "styled-components";
 import GridItem from "./grid-item";
+import { memo } from "react";
 
 const Grid = () => {
 	return (
@@ -61,7 +62,7 @@ const Grid = () => {
 	);
 };
 
-export default Grid;
+export default memo(Grid);
 
 const GridWrapper = styled.div`
 	display: flex;
