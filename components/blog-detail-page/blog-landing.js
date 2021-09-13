@@ -3,10 +3,8 @@
 import styled from "styled-components";
 import { memo } from "react";
 import UIParagraph from "../ui/paragraph";
-import UIH1 from "../ui/heading1";
-import UIH2 from "../ui/heading2";
 
-const Landing = () => {
+const BlogLanding = () => {
 	return (
 		<Wrapper>
 			<CustomContainer>
@@ -27,7 +25,7 @@ const Landing = () => {
 	);
 };
 
-export default Landing;
+export default BlogLanding;
 
 const CustomContainer = styled.div`
 	width: 100%;

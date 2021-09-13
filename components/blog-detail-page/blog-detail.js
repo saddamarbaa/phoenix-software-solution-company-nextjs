@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { fragment } from "react";
-import Landing from "./Landing";
+import BlogLanding from "./blog-landing";
 
 import { memo } from "react";
 
