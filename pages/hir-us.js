@@ -4,6 +4,8 @@ import { Fragment } from "react";
 import Head from "next/head";
 
 import HirUsPageComponent from "../components/hire-us-page/hir-us";
+import MainNavigation from "../components/layout/main-navigation";
+
 function HirUsPage(props) {
 	return (
 		<Fragment>
@@ -15,6 +17,7 @@ function HirUsPage(props) {
 				/>
 			</Head>
 
+			<MainNavigation />
 			<HirUsPageComponent />
 		</Fragment>
 	);

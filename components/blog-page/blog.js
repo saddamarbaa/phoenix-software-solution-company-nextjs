@@ -1,13 +1,15 @@
 /** @format */
 
-import React, { Fragment } from "react";
+import React, { Fragment, memo } from "react";
+
 import AllBlog from "./all-blog";
 import Welcoming from "./welcoming";
-import { memo } from "react";
+import MainNavigation from "../layout/main-navigation";
 
 const BlogComponent = () => {
 	return (
 		<Fragment>
+			<MainNavigation />
 			<Welcoming />
 			<AllBlog />
 		</Fragment>

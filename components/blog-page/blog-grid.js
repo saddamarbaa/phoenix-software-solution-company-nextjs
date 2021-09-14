@@ -1,7 +1,8 @@
 /** @format */
 import styled from "styled-components";
-import GridItem from "./blog-grid-item";
 import { memo } from "react";
+
+import GridItem from "./blog-grid-item";
 
 const BlogGrid = () => {
 	return (

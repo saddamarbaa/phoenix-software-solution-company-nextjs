@@ -2,8 +2,9 @@
 
 import styled from "styled-components";
 import Image from "next/image";
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 import { memo } from "react";
+
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 const AboutContent = () => {
 	return (

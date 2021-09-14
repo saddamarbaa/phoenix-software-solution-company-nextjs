@@ -2,11 +2,14 @@
 
 import styled from "styled-components";
 import Image from "next/image";
-import { Avatar } from "@material-ui/core";
-import CustomGrid from "./grid";
+import { Avatar } from "@material-ui/core";;
 import { memo } from "react";
+import { useRouter } from "next/router";
+
+import CustomGrid from "./grid"
 
 const WorkFeed = () => {
+	const router = useRouter();
 	return (
 		<WorkWrapper>
 			<AbsoluteContainer>
@@ -78,7 +81,12 @@ const WorkFeed = () => {
 					</p>
 				</div>
 
-				<CustomButton>HIRE US</CustomButton>
+				<CustomButton
+					onClick={() => {
+						router.push("/hir-us");
+					}}>
+					HIRE US
+				</CustomButton>
 			</WorkSection>
 		</WorkWrapper>
 	);

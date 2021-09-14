@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
+
 import ContactComponent from "../components/contact-page/contact";
 
 function ContactPage() {

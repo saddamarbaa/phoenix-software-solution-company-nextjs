@@ -1,19 +1,20 @@
 /** @format */
 
 import styled from "styled-components";
-import UIButton from "../ui/button";
 import Image from "next/image";
+import { memo } from "react";
+import { useRouter } from "next/router";
+
+import UIButton from "../ui/button";
+import UIParagraph from "../ui/paragraph";
 import GridItem from "../work-page/grid-item";
 import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
-import { memo } from "react";
-
-import UIParagraph from "../ui/paragraph";
 
 const Landing = () => {
+	const router = useRouter();
 	return (
 		<>
 			<FirstWrapper>
-				{" "}
 				<AbsoluteRoundBordersComponent />{" "}
 			</FirstWrapper>
 			<Wrapper>
@@ -58,7 +59,11 @@ const Landing = () => {
 							/>
 						</HiddenImageContainer>
 
-						<div className='hid-s'>
+						<div
+							className='hid-s'
+							onClick={() => {
+								router.push("/hir-us");
+							}}>
 							<UIButton>HIRE US</UIButton>
 						</div>
 					</LeftContent>
@@ -136,7 +141,11 @@ const Landing = () => {
 								layout='responsive'
 							/>
 						</HiddenImageContainer>
-						<div className='hid-s'>
+						<div
+							className='hid-s'
+							onClick={() => {
+								router.push("/hir-us");
+							}}>
 							<UIButton>HIRE US</UIButton>
 						</div>
 					</ForthRightContent>

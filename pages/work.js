@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
+
 import WorkComponent from "../components/work-page/work";
 
 function WorkPage() {

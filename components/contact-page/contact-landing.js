@@ -1,8 +1,9 @@
 /** @format */
 
 import styled from "styled-components";
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 import { memo } from "react";
+
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 const ContactLanding = () => {
 	return (

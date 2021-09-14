@@ -151,18 +151,20 @@ const Wrapper = styled.div`
 	background: #e5e5e5;
 	padding: 5rem 9%;
 	position: relative;
+	padding-bottom: 8rem;
+	@media (min-width: 768px) {
+		padding-bottom: 11rem !important;
+	}
 `;
 
 const HirUsContainer = styled.div`
 	max-width: 35.563rem;
 	margin: 0 auto;
 	margin-bottom: 2rem;
-
 	h1 {
 		font-size: 24px;
 		margin-bottom: 2rem;
 		color: var(--color-primary);
-
 		@media (min-width: 568px) {
 			text-align: center;
 			max-width: 25rem;
@@ -182,7 +184,6 @@ const ImageContainer = styled.div`
 	max-width: 73.125rem;
 	overflow: hidden;
 	margin: 6rem auto;
-
 	@media (max-width: 768px) {
 		display: none;
 	}
@@ -196,7 +197,6 @@ const HiddenImageContainer = styled.div`
 	@media (min-width: 768px) {
 		display: none;
 	}
-
 	img {
 		object-fit: cover;
 		display: block;
@@ -215,12 +215,10 @@ const ContactContainer = styled.div`
 	flex-wrap: wrap;
 	background-color: white;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-
 	@media (min-width: 768px) {
 		margin-top: 12rem;
 		min-width: 34.813rem;
 	}
-
 	.control {
 		margin-bottom: 2rem;
 	}
@@ -230,7 +228,6 @@ const ContactContainer = styled.div`
 		font-weight: bold;
 		margin-bottom: 0.5rem;
 	}
-
 	.control input {
 		height: 3.1rem;
 	}
@@ -238,7 +235,6 @@ const ContactContainer = styled.div`
 		height: 9.688rem;
 		resize: none;
 	}
-
 	.control label#filePicker-label,
 	.control textarea,
 	.control input {
@@ -251,27 +247,22 @@ const ContactContainer = styled.div`
 		border: 1px solid rgba(231, 231, 235, 0.48);
 		background: rgba(231, 231, 235, 0.48);
 		backdrop-filter: blur(100px);
-
 		@media (min-width: 768px) {
 			max-width: 27.125rem;
 		}
-
 		&:hover {
 			background: #e0d4fd;
 			border: 1px solid #e0d4fd;
 		}
-
 		::placeholder {
 			/* Chrome, Firefox, Opera, Safari 10.1+ */
 			color: #878599;
 			opacity: 1; /* Firefox */
 		}
-
 		:-ms-input-placeholder {
 			/* Internet Explorer 10-11 */
 			color: #878599;
 		}
-
 		::-ms-input-placeholder {
 			/* Microsoft Edge */
 			color: #878599;
@@ -287,12 +278,10 @@ const LeftContent = styled.div`
 	width: 500px;
 	border-right: 1px solid #9f9ead;
 	padding: 3rem 2rem;
-
 	@media (max-width: 768px) {
 		min-width: 100%;
 		border-right: 0;
 	}
-
 	p {
 		span {
 			display: none;
@@ -305,11 +294,9 @@ const LeftContent = styled.div`
 
 const RightContent = styled(LeftContent)`
 	border: none;
-
 	@media (min-width: 768px) {
 		padding-left: 4rem;
 	}
-
 	@media (max-width: 768px) {
 		padding-top: 0;
 		margin-top: -1.4rem;
@@ -317,7 +304,6 @@ const RightContent = styled(LeftContent)`
 			display: none;
 		}
 	}
-
 	.control label#filePicker-label {
 		font-style: normal;
 		font-weight: normal;
@@ -328,7 +314,6 @@ const RightContent = styled(LeftContent)`
 		align-items: center;
 		margin-bottom: 0;
 		border: 1px dashed #cfced6;
-
 		&:hover {
 			border: 1px dashed #cfced6;
 		}

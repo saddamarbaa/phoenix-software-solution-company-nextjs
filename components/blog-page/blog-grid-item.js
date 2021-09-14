@@ -4,10 +4,15 @@ import styled from "styled-components";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Avatar, IconButton } from "@material-ui/core";
 import { memo } from "react";
+import { useRouter } from "next/router";
 
 const GridItem = ({ src, title, name, authorImageSrc }) => {
+	const router = useRouter();
 	return (
-		<Wrapper>
+		<Wrapper
+			onClick={() => {
+				router.push("/detail-blog");
+			}}>
 			<TopWrapper>
 				<p className='post-title'>{title}</p>
 				<Author>

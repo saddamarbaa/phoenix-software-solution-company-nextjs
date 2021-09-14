@@ -4,10 +4,15 @@ import styled from "styled-components";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Image from "next/image";
 import { memo } from "react";
+import { useRouter } from "next/router";
 
 const GridItem = ({ src, title }) => {
+	const router = useRouter();
 	return (
-		<Wrapper>
+		<Wrapper
+			onClick={() => {
+				router.push("/work-detail");
+			}}>
 			<ContentContainer>
 				<ImageContainer>
 					<Image

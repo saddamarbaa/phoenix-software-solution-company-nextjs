@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import Head from "next/head";
+
 import BlogDetailComponent from "../components/blog-detail-page/blog-detail";
 
 function HirUsPage(props) {

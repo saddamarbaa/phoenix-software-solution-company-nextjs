@@ -1,13 +1,15 @@
 /** @format */
 
-import React from "react";
+import React, { memo } from "react";
+
 import Landing from "./landing";
 import WorkFeed from "./work-feed";
-import { memo } from "react";
+import MainNavigation from "../layout/main-navigation";
 
 const WorkComponent = () => {
 	return (
 		<React.Fragment>
+			<MainNavigation />
 			<Landing />
 			<WorkFeed />
 		</React.Fragment>

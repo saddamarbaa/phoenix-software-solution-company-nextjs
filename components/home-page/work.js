@@ -1,9 +1,13 @@
 /** @format */
 
 import styled from "styled-components";
+import { useRouter } from "next/router";
+
 import GridItem from "../work-page/grid-item";
 import Option from "./work-option";
+
 const Work = () => {
+	const router = useRouter();
 	return (
 		<WorkWrapper>
 			<AbsoluteContainer>
@@ -43,7 +47,12 @@ const Work = () => {
 				</GridContainer>
 			</CustomContainer>
 
-			<CustomButton>VIEW ALL WORK</CustomButton>
+			<CustomButton
+				onClick={() => {
+					router.push("/work");
+				}}>
+				VIEW ALL WORK
+			</CustomButton>
 		</WorkWrapper>
 	);
 };

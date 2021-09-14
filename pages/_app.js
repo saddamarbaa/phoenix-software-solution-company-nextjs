@@ -49,6 +49,4 @@ export default MyApp;
 
 // https://www.figma.com/file/Or3aXdkrEIJzcLdrqUEltF/PHOENIX-SOFTWARE-SOLUTIONS-WEBSITE?node-id=2%3A18
 
-// git commit -m "feat: add hir us page"
-
-// git commit -m "feat: add clean up and optimization with memo"
+//  add clean up and refactor file structure

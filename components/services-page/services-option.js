@@ -1,14 +1,16 @@
 /** @format */
 
 import styled from "styled-components";
-import UIButton from "../ui/button";
 import Image from "next/image";
-import GridItem from "../work-page/grid-item";
 import { memo } from "react";
+import { useRouter } from "next/router";
 
+import GridItem from "../work-page/grid-item";
+import UIButton from "../ui/button";
 import UIParagraph from "../ui/paragraph";
 
 const ServicesOption = () => {
+	const router = useRouter();
 	return (
 		<Wrapper>
 			<SecondContainer>
@@ -42,8 +44,17 @@ const ServicesOption = () => {
 						/>
 					</HiddenImageContainer>
 
-					<div className='hid-s'>
-						<UIButton>HIRE US</UIButton>
+					<div
+						className='hid-s'
+						onClick={() => {
+							router.push("/hir-us");
+						}}>
+						<UIButton
+							onClick={() => {
+								router.push("/hir-us");
+							}}>
+							HIRE US
+						</UIButton>
 					</div>
 				</LeftContent>
 				<RightContent>
@@ -79,13 +90,9 @@ export default memo(ServicesOption);
 
 const Wrapper = styled.div`
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	background: white;
 	padding: 5rem 9%;
-
-	@media (min-width: 768px) {
-		padding: 8rem 9% !important;
-	}
 
 	.hid-s {
 		@media (max-width: 768px) {
@@ -114,7 +121,6 @@ const Heading1 = styled.h1`
 	font-style: normal;
 	font-weight: bold;
 	line-height: 150%;
-
 	@media (min-width: 568px) {
 		font-size: 1.5rem;
 	}
@@ -125,7 +131,6 @@ const Heading2 = styled.h2`
 	margin-bottom: 2rem;
 	line-height: 1.4;
 	color: var(--color-primary);
-
 	@media (min-width: 568px) {
 		font-size: 1.5rem;
 		font-weight: 700;
@@ -152,11 +157,9 @@ const ImageContainer = styled.div`
 	min-width: 100%;
 	background: #c4c4c4;
 	z-index: 3;
-
 	img {
 		display: block;
 	}
-
 	@media (max-width: 768px) {
 		display: none;
 	}
@@ -169,7 +172,6 @@ const HiddenImageContainer = styled.div`
 	@media (min-width: 768px) {
 		display: none;
 	}
-
 	@media (max-width: 768px) {
 		margin-top: 3rem;
 	}
@@ -187,7 +189,6 @@ const AbsoluteContainer = styled.div`
 	background: var(--color-primary);
 	top: -3.75rem;
 	z-index: 1;
-
 	@media (max-width: 768px) {
 		display: none;
 	}
@@ -208,7 +209,6 @@ const GridContainer = styled.div`
 	column-gap: 3rem;
 	row-gap: 3.5rem;
 	margin: 0 auto;
-
 	@media (max-width: 768px) {
 		flex-wrap: wrap;
 	}

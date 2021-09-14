@@ -1,10 +1,13 @@
 /** @format */
 import styled from "styled-components";
 import Image from "next/image";
-import BlogGrid from "./blog-grid";
 import { memo } from "react";
+import { useRouter } from "next/router";
+
+import BlogGrid from "./blog-grid";
 
 const AllBlog = () => {
+	const router = useRouter();
 	return (
 		<Wrapper>
 			<CustomContainer>
@@ -64,7 +67,12 @@ const AllBlog = () => {
 								/>
 							</HiddenImageContainer>
 
-							<CustomButton>READ MORE</CustomButton>
+							<CustomButton
+								onClick={() => {
+									router.push("/detail-blog");
+								}}>
+								READ MORE
+							</CustomButton>
 						</ContentSection>
 					</MiddleContainer>
 					<BlogGrid />

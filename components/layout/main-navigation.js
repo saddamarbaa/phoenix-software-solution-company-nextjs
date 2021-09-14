@@ -5,6 +5,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { fragment } from "react";
+
 import Logo from "./logo";
 import SideBar from "./side-bar";
 
@@ -13,7 +14,7 @@ function MainNavigation() {
 
 	return (
 		<fragment>
-			<Header>
+			<Header id='header'>
 				<CustomContainer>
 					<Link href='/'>
 						<a>
@@ -40,14 +41,6 @@ function MainNavigation() {
 							<li className='hid-m'>
 								<Link href='/contact'>CONTACT US</Link>
 							</li>
-
-							<li className='hid-m'>
-								<Link href='/hir-us'>Hire Us</Link>
-							</li>
-
-							{/* <li className='hid-m'>
-								<Link href='/detail-blog'>Hire Us</Link>
-							</li> */}
 
 							<li className='hid-big'>
 								<MenuIcon
@@ -82,6 +75,12 @@ const CustomContainer = styled.div`
 	align-items: center;
 	max-width: 87.5rem;
 	margin: 0 auto;
+
+	#header a:hover,
+	#header a:active,
+	#header a.active {
+		color: red !important;
+	}
 `;
 
 const Header = styled.header`
@@ -106,6 +105,7 @@ const Header = styled.header`
 	a {
 		color: white;
 	}
+
 	nav {
 		flex: 1;
 		@media (min-width: 568px) {
@@ -129,6 +129,7 @@ const Header = styled.header`
 					&:hover,
 					&:active {
 						border-bottom: 2px solid var(--color-secondary);
+						transition: var(--transition-duration);
 					}
 				}
 			}
@@ -164,10 +165,6 @@ const Header = styled.header`
 		padding: 0.5rem 1rem;
 		border-radius: 4px;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		-ms-border-radius: 4px;
-		-o-border-radius: 4px;
 		transition-duration: var(--transition-duration);
 		min-width: fit-content;
 		&:hover,

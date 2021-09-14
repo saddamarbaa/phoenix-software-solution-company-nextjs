@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Avatar, IconButton } from "@material-ui/core";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import Link from "next/link";
 
 const TESTIMONIAL = () => {
 	return (
@@ -76,7 +77,11 @@ const TESTIMONIAL = () => {
 							</p>
 						</div>
 
-						<CustomButton>HIRE US</CustomButton>
+						<Link href='/hir-us'>
+							<a>
+								<CustomButton>HIRE US</CustomButton>
+							</a>
+						</Link>
 					</WorkSection>
 				</BottomContainer>
 			</CustomContainer>

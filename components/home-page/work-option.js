@@ -3,77 +3,92 @@
 import styled from "styled-components";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Image from "next/image";
+import Link from "next/link";
 
 const GridItem = () => {
 	return (
 		<GridContainer>
-			<Wrapper style={{ width: "750px" }}>
-				<ContentContainer
-					style={{
-						width: "750px",
-					}}>
-					<ImageContainer
-						style={{
-							position: "relative",
-							cursor: "pointer",
-							width: "750px",
-						}}>
-						<Image
-							src='/home/work1.jpg'
-							alt='qsak Image'
-							layout='fill'
-							objectFit='cover'
-						/>
-					</ImageContainer>
-
-					<Content>
-						<div className='content'>
-							<div className='title'> Work Title</div>
-							<div className='icons'>
-								View Detail
-								<ArrowForwardIcon
-									style={{ marginLeft: "1rem", color: "#00d0b0" }}
+			<Link href='/work-detail'>
+				<a>
+					<Wrapper style={{ width: "750px" }}>
+						<ContentContainer
+							style={{
+								width: "750px",
+							}}>
+							<ImageContainer
+								style={{
+									position: "relative",
+									cursor: "pointer",
+									width: "750px",
+								}}>
+								<Image
+									src='/home/work1.jpg'
+									alt='qsak Image'
+									layout='fill'
+									objectFit='cover'
 								/>
-							</div>
-						</div>
-						<div className='design'>Web Design</div>
-					</Content>
-				</ContentContainer>
-			</Wrapper>
+							</ImageContainer>
 
-			<Wrapper style={{ width: "369px", minWith: "369px" }}>
-				<ContentContainer
-					style={{
-						width: "369px",
-						minWith: "369px",
-					}}>
-					<ImageContainer
-						style={{
-							position: "relative",
-							cursor: "pointer",
-							width: "369px",
-						}}>
-						<Image
-							src='/home/work2.jpg'
-							alt='qsak Image'
-							layout='fill'
-							objectFit='cover'
-						/>
-					</ImageContainer>
-					<Content>
-						<div className='content'>
-							<div className='title'> Work Title</div>
-							<div className='icons'>
-								View Detail
-								<ArrowForwardIcon
-									style={{ marginLeft: "1rem", color: "#00d0b0" }}
+							<Content>
+								<div className='content'>
+									<div className='title'> Work Title</div>
+									<div className='icons'>
+										View Detail
+										<ArrowForwardIcon
+											style={{
+												marginLeft: "1rem",
+												color: "#00d0b0",
+											}}
+										/>
+									</div>
+								</div>
+								<div className='design'>Web Design</div>
+							</Content>
+						</ContentContainer>
+					</Wrapper>
+				</a>
+			</Link>
+
+			<Link href='/work-detail'>
+				<a>
+					<Wrapper style={{ width: "369px", minWith: "369px" }}>
+						<ContentContainer
+							style={{
+								width: "369px",
+								minWith: "369px",
+							}}>
+							<ImageContainer
+								style={{
+									position: "relative",
+									cursor: "pointer",
+									width: "369px",
+								}}>
+								<Image
+									src='/home/work2.jpg'
+									alt='qsak Image'
+									layout='fill'
+									objectFit='cover'
 								/>
-							</div>
-						</div>
-						<div className='design'>Web Design</div>
-					</Content>
-				</ContentContainer>
-			</Wrapper>
+							</ImageContainer>
+							<Content>
+								<div className='content'>
+									<div className='title'> Work Title</div>
+									<div className='icons'>
+										View Detail
+										<ArrowForwardIcon
+											style={{
+												marginLeft: "1rem",
+												color: "#00d0b0",
+											}}
+										/>
+									</div>
+								</div>
+								<div className='design'>Web Design</div>
+							</Content>
+						</ContentContainer>
+					</Wrapper>
+				</a>
+			</Link>
 		</GridContainer>
 	);
 };

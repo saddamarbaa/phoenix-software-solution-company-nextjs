@@ -1,9 +1,12 @@
 /** @format */
 import styled from "styled-components";
-import Grid from "./about-grid";
 import { memo } from "react";
+import { useRouter } from "next/router";
+
+import Grid from "./about-grid";
 
 const Meeting = () => {
+	const router = useRouter();
 	return (
 		<Wrapper>
 			<AbsoluteContainer>
@@ -67,7 +70,12 @@ const Meeting = () => {
 							</p>
 						</div>
 
-						<CustomButton>HIRE US</CustomButton>
+						<CustomButton
+							onClick={() => {
+								router.push("/hir-us");
+							}}>
+							HIRE US
+						</CustomButton>
 					</WorkSection>
 				</BottomContainer>
 			</CustomContainer>

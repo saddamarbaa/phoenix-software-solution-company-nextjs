@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 function AboutUsCom() {
+	const router = useRouter();
 	return (
 		<AboutAsWrapper>
 			<AbsoluteContainer>
@@ -77,7 +79,12 @@ function AboutUsCom() {
 						/>
 					</HiddenImageContainer>
 
-					<CustomButton>VIEW DETAIL</CustomButton>
+					<CustomButton
+						onClick={() => {
+							router.push("/about-us");
+						}}>
+						VIEW DETAIL
+					</CustomButton>
 				</ContentContainer>
 			</CustomContainer>
 		</AboutAsWrapper>

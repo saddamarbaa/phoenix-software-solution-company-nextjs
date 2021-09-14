@@ -2,6 +2,8 @@
 
 import styled from "styled-components";
 import { memo } from "react";
+import Image from "next/image";
+
 import UIParagraph from "../ui/paragraph";
 
 const BlogLanding = () => {
@@ -9,16 +11,26 @@ const BlogLanding = () => {
 		<Wrapper>
 			<CustomContainer>
 				<section>
-					<h2>WORK WITH US</h2>
+					<h2>DETAIL BLOG</h2>
 					<div className='inner-container'>
-						<h1>Have you decided to work on a project with us?</h1>
+						<h1>The importance of color in design</h1>
 
 						<UIParagraph>
-							Interested in joining our team and impacting the world?
-							Reach out! We are always looking for new projects to help
-							take design to the next level!
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Rutrum leo penatibus mauris nibh ligula faucibus sagittis
+							id.
 						</UIParagraph>
 					</div>
+
+					<HiddenImageContainer>
+						<Image
+							src='/home/home2.jpg'
+							alt='Hero Image'
+							width={500}
+							height={400}
+							layout='responsive'
+						/>
+					</HiddenImageContainer>
 				</section>
 			</CustomContainer>
 		</Wrapper>
@@ -35,19 +47,24 @@ const CustomContainer = styled.div`
 
 const Wrapper = styled.div`
 	background: #e5e5e5;
-	padding: 5rem 9%;
 	display: grid;
 	place-items: center;
 	position: relative;
 	width: 100vw;
+	padding: 5rem 9% !important;
 
-	@media (min-width: 1169px) {
-		display: grid;
-		padding-bottom: 400px !important;
+	@media (min-width: 768px) {
+		padding: 8rem 9% !important;
 		min-height: 100vh;
 	}
 
+	@media (min-width: 1169px) {
+		padding-bottom: 400px !important;
+	}
+
 	section {
+		max-width: 1170px;
+		margin: 0 auto;
 		h2 {
 			text-align: left;
 			margin-bottom: 2rem;
@@ -59,8 +76,6 @@ const Wrapper = styled.div`
 		}
 
 		h1 {
-			width: 477px;
-
 			color: var(--color-primary);
 			margin-bottom: 2rem;
 
@@ -72,6 +87,10 @@ const Wrapper = styled.div`
 			@media (min-width: 991px) {
 				font-size: 2rem;
 				min-width: 477px;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 52px;
+				line-height: 150%;
 			}
 		}
 	}
@@ -79,19 +98,34 @@ const Wrapper = styled.div`
 	.inner-container {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
+
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
 
 		p {
-			margin: 1rem 0;
 			line-height: var(--line-height);
 			color: #878599;
-			margin: 1rem 0;
 			max-width: 500px;
 			@media (min-width: 768px) {
 				font-size: 1.1rem;
 				width: 500px;
 			}
 		}
+	}
+`;
+
+const HiddenImageContainer = styled.div`
+	width: 100%;
+	max-height: 20rem;
+	overflow: hidden;
+	margin-top: 4rem;
+	@media (min-width: 768px) {
+		display: none;
+	}
+
+	img {
+		object-fit: cover;
+		display: block;
 	}
 `;

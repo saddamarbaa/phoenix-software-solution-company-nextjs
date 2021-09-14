@@ -1,14 +1,16 @@
 /** @format */
 
-import React, { fragment } from "react";
+import React, { fragment, memo } from "react";
+
 import AboutContent from "./about-content";
 import Team from "./team";
 import Meeting from "./meeting";
-import { memo } from "react";
+import MainNavigation from "../layout/main-navigation";
 
 const AboutUsComponent = () => {
 	return (
 		<fragment>
+			<MainNavigation />
 			<AboutContent />
 			<Team />
 			<Meeting />

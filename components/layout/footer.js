@@ -21,23 +21,25 @@ const Footer = () => {
 						<ul className='logo-container'>
 							<li className='head logo-list'>
 								<Link href='/'>
-									<LogoImage>
-										<div
-											className='logo'
-											style={{
-												position: "relative",
-												cursor: "pointer",
-											}}>
-											<Image
-												className='logo-img'
-												src='/logo/logo.png'
-												alt='PHOENIX LOGO'
-												layout='fill'
-												objectFit='contain'
-											/>
-										</div>
-										<div>PHOENIX </div>
-									</LogoImage>
+									<a>
+										<LogoImage>
+											<div
+												className='logo'
+												style={{
+													position: "relative",
+													cursor: "pointer",
+												}}>
+												<Image
+													className='logo-img'
+													src='/logo/logo.png'
+													alt='PHOENIX LOGO'
+													layout='fill'
+													objectFit='contain'
+												/>
+											</div>
+											<div>PHOENIX </div>
+										</LogoImage>
+									</a>
 								</Link>
 							</li>
 							<li className='logo-list'>
@@ -84,13 +86,13 @@ const Footer = () => {
 								<div id='head'></div>
 							</h3>
 							<li>
-								<Link href='#'>Our Team</Link>
+								<Link href='/about-us'>Our Team</Link>
 							</li>
 							<li>
-								<Link href='#'>About Us</Link>
+								<Link href='/about-us'>About Us</Link>
 							</li>
 							<li>
-								<Link href='#'>Contact Us</Link>
+								<Link href='/contact'>Contact Us</Link>
 							</li>
 							<li>
 								<Link href='#'>Career?</Link>
