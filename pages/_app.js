@@ -47,6 +47,5 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp;
 
+// figma file
 // https://www.figma.com/file/Or3aXdkrEIJzcLdrqUEltF/PHOENIX-SOFTWARE-SOLUTIONS-WEBSITE?node-id=2%3A18
-
-//  add clean up and refactor file structure
