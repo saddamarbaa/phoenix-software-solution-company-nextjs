@@ -4,13 +4,34 @@ import styled from "styled-components";
 import { memo } from "react";
 import Image from "next/image";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import { useRef, useEffect } from "react";
 
 import GridItem from "../work-page/grid-item";
 import UIParagraph from "../ui/paragraph";
 
 const WorkDetailComponent = () => {
+	const autoScrollToBottomRef = useRef(null);
+
+	// Auto Scroll functionality
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+		// Auto Scroll functionality
+		autoScrollToBottomRef?.current?.scrollIntoView({
+			behavior: "smooth",
+		});
+	}, []);
+
 	return (
-		<Wrapper>
+		<Wrapper style={{ position: "relative" }}>
+			{/* Empty div for auto scroll */}
+			<div
+				ref={autoScrollToBottomRef}
+				style={{ paddingTop: "7rem", position: "absolute", top: "0" }}
+				className='auto-scroll'></div>
+
 			<CustomContainer>
 				<section>
 					<h2>DETAIL WORK</h2>

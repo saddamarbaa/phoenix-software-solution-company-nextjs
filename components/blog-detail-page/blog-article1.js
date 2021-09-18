@@ -3,10 +3,27 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { Avatar, IconButton } from "@material-ui/core";
+import { useRef, useEffect } from "react";
 
 function BlogArticle1() {
+	const autoScrollToBottomRef = useRef(null);
+
+	// Auto Scroll functionality
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}, []);
+
 	return (
 		<AboutAsWrapper>
+			{/* Empty div for auto scroll */}
+			<div
+				ref={autoScrollToBottomRef}
+				style={{ paddingTop: "7rem" }}
+				className='auto-scroll'></div>
+
 			<AbsoluteContainer>
 				<CustomContainer>
 					<div className='content-container'>

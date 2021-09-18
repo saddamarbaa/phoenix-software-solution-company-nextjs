@@ -5,12 +5,33 @@ import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 import { memo } from "react";
 import Image from "next/image";
 import AttachmentIcon from "@material-ui/icons/Attachment";
+import { useRef, useEffect } from "react";
 
 import UIParagraph from "../ui/paragraph";
 
 const HirUsPageComponent = () => {
+	const autoScrollToBottomRef = useRef(null);
+
+	// Auto Scroll functionality
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+		// Auto Scroll functionality
+		autoScrollToBottomRef?.current?.scrollIntoView({
+			behavior: "smooth",
+		});
+	}, []);
+
 	return (
-		<Wrapper>
+		<Wrapper style={{ position: "relative" }}>
+			{/* Empty div for auto scroll */}
+			<div
+				ref={autoScrollToBottomRef}
+				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
+				className='auto-scroll'></div>
+
 			<AbsoluteRoundBordersComponent />
 			<CustomContainer>
 				<HirUsContainer>
