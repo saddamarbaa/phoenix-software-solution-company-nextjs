@@ -4,63 +4,76 @@ import styled from "styled-components";
 import { IconButton } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import Link from "next/link";
+import ReactDOM from "react-dom";
+
+import BackDrop from "../ui/backdrop";
 
 const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus }) => {
+	// Portal
 	return (
-		<SideBarWrapper burgerMenuStatus={burgerMenuStatus}>
-			<IconButton style={{ marginLeft: "-1rem" }}>
-				<CloseIcon
-					style={{ color: "#00d0b0" }}
-					onClick={() => {
-						SetBurgerMenuStatus(false);
-					}}
-				/>
-			</IconButton>
-			<ul>
-				<li
+		<BackDrop>
+			{ReactDOM.createPortal(
+				<ModalOverlay
+					burgerMenuStatus={burgerMenuStatus}
 					onClick={() => {
 						SetBurgerMenuStatus(false);
 					}}>
-					<Link href='/'>Home</Link>
-				</li>
-				<li
-					onClick={() => {
-						SetBurgerMenuStatus(false);
-					}}>
-					<Link href='/work'>Work</Link>
-				</li>
-				<li
-					onClick={() => {
-						SetBurgerMenuStatus(false);
-					}}>
-					<Link href='/services'>Services</Link>
-				</li>
-				<li
-					onClick={() => {
-						SetBurgerMenuStatus(false);
-					}}>
-					<Link href='/blog'>Blog</Link>
-				</li>
-				<li
-					onClick={() => {
-						SetBurgerMenuStatus(false);
-					}}>
-					<Link href='/about-us'>About us</Link>
-				</li>
-				<li
-					onClick={() => {
-						SetBurgerMenuStatus(false);
-					}}>
-					<Link href='/contact'>Contact us</Link>
-				</li>
-			</ul>
-		</SideBarWrapper>
+					<IconButton style={{ marginLeft: "-1rem" }}>
+						<CloseIcon
+							style={{ color: "#00d0b0" }}
+							onClick={() => {
+								SetBurgerMenuStatus(false);
+							}}
+						/>
+					</IconButton>
+					<ul>
+						<li
+							onClick={() => {
+								SetBurgerMenuStatus(false);
+							}}>
+							<Link href='/'>Home</Link>
+						</li>
+						<li
+							onClick={() => {
+								SetBurgerMenuStatus(false);
+							}}>
+							<Link href='/work'>Work</Link>
+						</li>
+						<li
+							onClick={() => {
+								SetBurgerMenuStatus(false);
+							}}>
+							<Link href='/services'>Services</Link>
+						</li>
+						<li
+							onClick={() => {
+								SetBurgerMenuStatus(false);
+							}}>
+							<Link href='/blog'>Blog</Link>
+						</li>
+						<li
+							onClick={() => {
+								SetBurgerMenuStatus(false);
+							}}>
+							<Link href='/about-us'>About us</Link>
+						</li>
+						<li
+							onClick={() => {
+								SetBurgerMenuStatus(false);
+							}}>
+							<Link href='/contact'>Contact us</Link>
+						</li>
+					</ul>
+				</ModalOverlay>,
+				document.getElementById("modal--overlay--root"),
+			)}
+		</BackDrop>
 	);
 };
 
 export default SideBar;
 
-const SideBarWrapper = styled.div`
+const ModalOverlay = styled.div`
 	transform: ${(props) =>
 		props.burgerMenuStatus ? "translateX(0)" : "translateX(100%)"};
 	z-index: 99999;
@@ -73,7 +86,7 @@ const SideBarWrapper = styled.div`
 	padding: 1.2rem;
 	background-color: #f8fbfe;
 	border-radius: 6px;
-	transition: transform 0.3s;
+	transition: transform var(--transition-duration);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 	-webkit-transition: transform var(--transition-duration);
 	-moz-transition: transform var(--transition-duration);

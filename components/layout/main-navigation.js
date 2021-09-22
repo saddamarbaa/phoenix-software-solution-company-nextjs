@@ -5,12 +5,14 @@ import { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { fragment } from "react";
+import { useRouter } from "next/router";
 
 import Logo from "./logo";
 import SideBar from "./side-bar";
 
 function MainNavigation() {
 	const [burgerMenuStatus, SetBurgerMenuStatus] = useState(false);
+	const router = useRouter();
 
 	return (
 		<fragment>
@@ -23,22 +25,32 @@ function MainNavigation() {
 					</Link>
 					<nav className='show'>
 						<ul>
-							<li className='hid-ss'>
+							<li
+								className='hid-ss'
+								id={router.pathname == "/" ? "active" : ""}>
 								<Link href='/'>HOME</Link>
 							</li>
 							<li className='hid-ss'>
 								<Link href='/work'>WORK</Link>
 							</li>
-							<li className='hid-s'>
+							<li
+								className='hid-s'
+								id={router.pathname == "/services" ? "active" : ""}>
 								<Link href='/services'>SERVICES</Link>
 							</li>
-							<li className='hid-s'>
+							<li
+								className='hid-s'
+								id={router.pathname == "/blog" ? "active" : ""}>
 								<Link href='/blog'>BLOG</Link>
 							</li>
-							<li className='hid-m'>
+							<li
+								className='hid-m'
+								id={router.pathname == "/about-us" ? "active" : ""}>
 								<Link href='/about-us'>ABOUT US</Link>
 							</li>
-							<li className='hid-m'>
+							<li
+								className='hid-m'
+								id={router.pathname == "/contact" ? "active" : ""}>
 								<Link href='/contact'>CONTACT US</Link>
 							</li>
 
@@ -57,10 +69,12 @@ function MainNavigation() {
 					<button>GET STARTED</button>
 				</CustomContainer>
 			</Header>
-			<SideBar
-				burgerMenuStatus={burgerMenuStatus}
-				SetBurgerMenuStatus={SetBurgerMenuStatus}
-			/>
+			{burgerMenuStatus && (
+				<SideBar
+					burgerMenuStatus={burgerMenuStatus}
+					SetBurgerMenuStatus={SetBurgerMenuStatus}
+				/>
+			)}
 		</fragment>
 	);
 }
@@ -75,12 +89,6 @@ const CustomContainer = styled.div`
 	align-items: center;
 	max-width: 87.5rem;
 	margin: 0 auto;
-
-	#header a:hover,
-	#header a:active,
-	#header a.active {
-		color: red !important;
-	}
 `;
 
 const Header = styled.header`
@@ -149,10 +157,16 @@ const Header = styled.header`
 				display: none;
 			}
 		}
+
 		li.hid-big {
 			@media (min-width: 568px) {
 				display: none;
 			}
+		}
+
+		li#active a {
+			border-bottom: 2px solid var(--color-secondary);
+			transition: var(--transition-duration);
 		}
 	}
 	button {
