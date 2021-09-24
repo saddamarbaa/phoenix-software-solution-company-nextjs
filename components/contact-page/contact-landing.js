@@ -1,14 +1,35 @@
 /** @format */
 
 import styled from "styled-components";
-import { memo } from "react";
+import { memo, useRef, useEffect } from "react";
 
 import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 const ContactLanding = () => {
+	const autoScrollToBottomRef = useRef(null);
+
+	// Auto Scroll functionality
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+		// Auto Scroll functionality
+		autoScrollToBottomRef?.current?.scrollIntoView({
+			behavior: "smooth",
+		});
+	}, []);
+
 	return (
 		<Wrapper>
 			<AbsoluteRoundBordersComponent />
+
+			{/* Empty div for auto scroll */}
+			<div
+				ref={autoScrollToBottomRef}
+				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
+				className='auto-scroll'></div>
+
 			<TopWrapper>
 				<CustomContainer>
 					<Container>

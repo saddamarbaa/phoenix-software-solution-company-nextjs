@@ -14,8 +14,36 @@ const Footer = () => {
 				<div></div>
 				<div></div>
 			</CustomAbsoluteRoundBorders>
+
+			<AbsoluteContainer>
+				<ImageContainer
+					style={{
+						position: "relative",
+						cursor: "pointer",
+					}}>
+					<Image
+						src='/gbgrrr.png'
+						alt='qsak Image'
+						layout='fill'
+						objectFit='cover'
+					/>
+				</ImageContainer>
+			</AbsoluteContainer>
+
 			<CustomContainer>
-				<div className='drop-back-shadow'></div>
+				<div
+					className='drop-back-shadow'
+					style={{
+						position: "relative",
+						cursor: "pointer",
+					}}>
+					<Image
+						src='/home/starbucks.png'
+						alt='Starbucks Image'
+						layout='fill'
+						objectFit='contain'
+					/>
+				</div>
 				<FooterTop>
 					<nav>
 						<ul className='logo-container'>
@@ -161,12 +189,16 @@ const FooterWrapper = styled.div`
 	color: white;
 	padding: 5rem 9%;
 	background: var(--color-primary);
-	background-image: linear-gradient(
+
+	/* background-image: linear-gradient(
 		to right,
 		rgba(0, 208, 176, 0.4),
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
-	);
+	); */
+
+	overflow: hidden;
+
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;
 	}
@@ -277,7 +309,24 @@ const FooterTop = styled.div`
 `;
 
 const FooterBottom = styled.div`
+	position: relative;
+	z-index: 300;
+	opacity: 0.99;
 	@media (min-width: 1200px) {
 		padding-left: 1rem;
 	}
+`;
+
+const AbsoluteContainer = styled.div`
+	width: 1200px;
+	height: 1200px;
+	position: absolute;
+	bottom: -700px;
+	left: -450px;
+`;
+
+const ImageContainer = styled.div`
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 `;
