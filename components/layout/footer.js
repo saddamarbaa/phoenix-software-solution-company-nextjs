@@ -22,7 +22,7 @@ const Footer = () => {
 						cursor: "pointer",
 					}}>
 					<Image
-						src='/gbgrrr.png'
+						src='/es.png'
 						alt='qsak Image'
 						layout='fill'
 						objectFit='cover'
@@ -160,6 +160,7 @@ export default Footer;
 
 const CustomAbsoluteRoundBorders = styled.div`
 	pointer-events: none;
+
 	div {
 		pointer-events: none;
 	}
@@ -180,6 +181,8 @@ const CustomAbsoluteRoundBorders = styled.div`
 		min-height: 100%;
 		border-left: 1px solid rgba(255, 255, 255, 20%);
 	}
+
+	/* display: none; */
 `;
 
 const FooterWrapper = styled.div`
@@ -189,13 +192,6 @@ const FooterWrapper = styled.div`
 	color: white;
 	padding: 5rem 9%;
 	background: var(--color-primary);
-
-	/* background-image: linear-gradient(
-		to right,
-		rgba(0, 208, 176, 0.4),
-		rgba(15, 11, 51, 0.3),
-		#0f0b33
-	); */
 
 	overflow: hidden;
 
@@ -207,8 +203,9 @@ const FooterWrapper = styled.div`
 const CustomContainer = styled.footer`
 	width: 100%;
 	max-width: var(--max-width);
-	overflow: hidden;
+	/* overflow: hidden; */
 	margin: 0 auto;
+
 	nav {
 		display: flex;
 		justify-content: space-between;
@@ -217,8 +214,21 @@ const CustomContainer = styled.footer`
 		ul {
 			flex: 1;
 			min-width: 250px;
+			position: relative;
+
 			@media (min-width: 1200px) {
 				padding-left: 1rem;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 2px;
+					height: 200%;
+					background: red;
+					left: 0px;
+					top: -300px;
+					display: none;
+				}
 			}
 			li {
 				margin-top: 2rem;
@@ -233,6 +243,7 @@ const CustomContainer = styled.footer`
 			}
 		}
 	}
+
 	#head {
 		position: absolute;
 		top: 4px;
@@ -243,6 +254,7 @@ const CustomContainer = styled.footer`
 			display: none;
 		}
 	}
+
 	.head {
 		position: relative;
 		font-weight: bold;
@@ -318,11 +330,11 @@ const FooterBottom = styled.div`
 `;
 
 const AbsoluteContainer = styled.div`
-	width: 1200px;
-	height: 1200px;
+	width: 1300px;
+	height: 1300px;
 	position: absolute;
-	bottom: -700px;
-	left: -450px;
+	bottom: -510px;
+	left: -550px;
 `;
 
 const ImageContainer = styled.div`
