@@ -10,16 +10,16 @@ const GridItem = () => {
 		<GridContainer>
 			<Link href='/work-detail'>
 				<a>
-					<Wrapper style={{ width: "750px" }}>
+					<Wrapper style={{ width: "46.875rem" }}>
 						<ContentContainer
 							style={{
-								width: "750px",
+								width: "46.875rem",
 							}}>
 							<ImageContainer
 								style={{
 									position: "relative",
 									cursor: "pointer",
-									width: "750px",
+									width: "46.875rem",
 								}}>
 								<Image
 									src='/home/work1.jpg'
@@ -51,17 +51,17 @@ const GridItem = () => {
 
 			<Link href='/work-detail'>
 				<a>
-					<Wrapper style={{ width: "369px", minWith: "369px" }}>
+					<Wrapper style={{ width: "21.875rem", minWith: "21.875rem" }}>
 						<ContentContainer
 							style={{
-								width: "369px",
-								minWith: "369px",
+								width: "21.875rem",
+								minWith: "21.875rem",
 							}}>
 							<ImageContainer
 								style={{
 									position: "relative",
 									cursor: "pointer",
-									width: "369px",
+									width: "21.875rem",
 								}}>
 								<Image
 									src='/home/work2.jpg'
@@ -96,8 +96,8 @@ const GridItem = () => {
 export default GridItem;
 
 const Wrapper = styled.div`
-	height: 659px;
-	width: 600px;
+	height: 41.188rem;
+	width: 37.5rem;
 
 	margin-bottom: 3.75rem;
 
@@ -126,8 +126,8 @@ const ContentContainer = styled.div`
 		-o-transform: translate3d(0, -5px, 0);
 	}
 
-	height: 659px;
-	width: 600px;
+	height: 41.188rem;
+	width: 37.5rem;
 `;
 
 const ImageContainer = styled.div`
@@ -161,10 +161,9 @@ const Content = styled.div`
 
 const GridContainer = styled.div`
 	width: 100%;
-	max-width: 78.125rem;
+	max-width: 71.75rem;
+	min-width: 71.75rem;
 	display: flex;
-	justify-content: space-between;
 	column-gap: 3rem;
-	row-gap: 3.75rem;
 	margin: 0 auto;
 `;

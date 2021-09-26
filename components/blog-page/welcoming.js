@@ -53,9 +53,10 @@ const CustomContainer = styled.div`
 
 const Wrapper = styled.div`
 	width: 100vw;
-	min-height: 100vh;
+	min-height: 90vh;
 	background: var(--color-primary);
 	padding: 5rem 9%;
+	padding-bottom: 10rem;
 	color: white;
 	display: grid;
 	place-items: center;
@@ -66,6 +67,10 @@ const Wrapper = styled.div`
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
 	);
+
+	@media (min-width: 1500px) {
+		padding-bottom: 10rem;
+	}
 `;
 
 const Container = styled.div`

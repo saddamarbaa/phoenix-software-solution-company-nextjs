@@ -113,7 +113,6 @@ const Header = styled.header`
 	a {
 		color: white;
 	}
-
 	nav {
 		flex: 1;
 		@media (min-width: 568px) {
@@ -157,13 +156,11 @@ const Header = styled.header`
 				display: none;
 			}
 		}
-
 		li.hid-big {
 			@media (min-width: 568px) {
 				display: none;
 			}
 		}
-
 		li#active a {
 			border-bottom: 2px solid var(--color-secondary);
 			transition: var(--transition-duration);

@@ -7,15 +7,7 @@ import Image from "next/image";
 const Footer = () => {
 	return (
 		<FooterWrapper>
-			<CustomAbsoluteRoundBorders>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</CustomAbsoluteRoundBorders>
-
-			<AbsoluteContainer>
+			<AbsoluteBackGroundlinearGradient>
 				<ImageContainer
 					style={{
 						position: "relative",
@@ -28,7 +20,7 @@ const Footer = () => {
 						objectFit='cover'
 					/>
 				</ImageContainer>
-			</AbsoluteContainer>
+			</AbsoluteBackGroundlinearGradient>
 
 			<CustomContainer>
 				<div
@@ -158,33 +150,6 @@ const Footer = () => {
 
 export default Footer;
 
-const CustomAbsoluteRoundBorders = styled.div`
-	pointer-events: none;
-
-	div {
-		pointer-events: none;
-	}
-
-	@media (max-width: 1100px) {
-		display: none;
-	}
-
-	display: flex;
-	justify-content: space-between;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 0 9%;
-	div {
-		min-height: 100%;
-		border-left: 1px solid rgba(255, 255, 255, 20%);
-	}
-
-	/* display: none; */
-`;
-
 const FooterWrapper = styled.div`
 	position: relative;
 	min-height: 38.5625rem;
@@ -192,7 +157,6 @@ const FooterWrapper = styled.div`
 	color: white;
 	padding: 5rem 9%;
 	background: var(--color-primary);
-
 	overflow: hidden;
 
 	@media (min-width: 768px) {
@@ -203,7 +167,6 @@ const FooterWrapper = styled.div`
 const CustomContainer = styled.footer`
 	width: 100%;
 	max-width: var(--max-width);
-	/* overflow: hidden; */
 	margin: 0 auto;
 
 	nav {
@@ -223,11 +186,10 @@ const CustomContainer = styled.footer`
 					content: "";
 					position: absolute;
 					width: 2px;
-					height: 200%;
-					background: red;
-					left: 0px;
+					height: 500%;
+					background: rgba(255, 255, 255, 20%);
+					left: -2px;
 					top: -300px;
-					display: none;
 				}
 			}
 			li {
@@ -269,6 +231,7 @@ const CustomContainer = styled.footer`
 			display: none;
 		}
 	}
+
 	button {
 		width: 148px;
 		height: 48px;
@@ -329,12 +292,19 @@ const FooterBottom = styled.div`
 	}
 `;
 
-const AbsoluteContainer = styled.div`
-	width: 1300px;
-	height: 1300px;
+const AbsoluteBackGroundlinearGradient = styled.div`
+	width: 1500px;
+	height: 1600px;
+	left: 0;
+	bottom: 0;
 	position: absolute;
 	bottom: -510px;
 	left: -550px;
+
+	@media (min-width: 1500px) {
+		width: 1800px;
+		height: 1700px;
+	}
 `;
 
 const ImageContainer = styled.div`

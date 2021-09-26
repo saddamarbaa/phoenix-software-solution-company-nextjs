@@ -128,6 +128,7 @@ const CustomContainer = styled.div`
 	min-height: 43.5625rem;
 	display: flex;
 	color: white;
+	padding-left: 4px;
 	justify-content: space-between;
 	@media (max-width: 768px) {
 		flex-wrap: wrap;
@@ -155,6 +156,7 @@ const JobsContain = styled.div`
 	justify-content: space-between;
 	max-width: 400px;
 	min-width: 300px;
+
 	@media (max-width: 568px) {
 		display: none;
 	}

@@ -74,7 +74,7 @@ const WorkWrapper = styled.section`
 
 const CustomContainer = styled.div`
 	width: 100%;
-	max-width: 1400px;
+	max-width: 71.75rem;
 	overflow: hidden;
 	margin: 0 auto;
 	position: relative;
@@ -82,9 +82,8 @@ const CustomContainer = styled.div`
 
 const GridContainer = styled.div`
 	width: 100%;
-	max-width: 78.125rem;
+	max-width: 71.75rem;
 	display: flex;
-	justify-content: space-between;
 	column-gap: 3rem;
 	row-gap: 3.5rem;
 	margin: 0 auto;
@@ -102,16 +101,18 @@ const HiddenGridContainer = styled(GridContainer)`
 `;
 
 const AbsoluteContainer = styled.div`
-	width: 100vw;
+	width: 100%;
 	position: absolute;
 	top: -280px;
 	left: 0;
 	right: 0;
 	padding: 0 9%;
 	.content-container {
+		overflow: hidden;
 		height: 561px;
 		width: 100%;
-		max-width: 78.125rem;
+		max-width: 71.75rem;
+		min-width: 71.75rem;
 		padding: 2rem;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 		background-color: white;

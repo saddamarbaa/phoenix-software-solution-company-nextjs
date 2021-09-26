@@ -58,6 +58,7 @@ body {
 	--size-40: 10rem;
 	font-family: "Roboto", sans-serif;
 	overflow-x: hidden;
+	position: relative;
 }
 
 h1,
