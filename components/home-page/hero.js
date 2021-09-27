@@ -10,6 +10,21 @@ function Hero() {
 		<HeroWrapper>
 			<AbsoluteRoundBordersComponent />
 
+			<AbsoluteBackGroundlinearGradient>
+				<LinearGradientImageContainer
+					style={{
+						position: "relative",
+						cursor: "pointer",
+					}}>
+					<Image
+						src='/es.png'
+						alt='qsak Image'
+						layout='fill'
+						objectFit='cover'
+					/>
+				</LinearGradientImageContainer>
+			</AbsoluteBackGroundlinearGradient>
+
 			<CustomContainer>
 				<ContentContainer>
 					<h1>
@@ -70,13 +85,19 @@ const HeroWrapper = styled.div`
 	width: 100vw;
 	color: white;
 	background: var(--color-primary);
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		to right,
 		rgba(0, 208, 176, 0.4),
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
-	);
+	); */
 	padding: 5rem 9%;
+
+	* {
+		opacity: 0.99;
+		z-index: 50;
+	}
+
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;
 		padding-right: 0;
@@ -208,4 +229,24 @@ const HiddenImageContainer = styled.div`
 		object-fit: cover;
 		display: block;
 	}
+`;
+
+const AbsoluteBackGroundlinearGradient = styled.div`
+	width: 1500px;
+	height: 1500px;
+	top: -700px;
+	left: -700px;
+	position: absolute;
+	z-index: 15 !important;
+
+	@media (min-width: 1500px) {
+		width: 1800px;
+		height: 1700px;
+	}
+`;
+
+const LinearGradientImageContainer = styled.div`
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 `;

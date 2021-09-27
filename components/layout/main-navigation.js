@@ -94,12 +94,12 @@ const CustomContainer = styled.div`
 const Header = styled.header`
 	color: white;
 	background: var(--color-primary);
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		to right,
 		rgba(0, 208, 176, 0.4),
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
-	);
+	); */
 	width: 100%;
 	height: 7rem;
 	display: flex;
