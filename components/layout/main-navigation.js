@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
-import React, { fragment } from "react";
+import React, { fragment, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import Logo from "./logo";
@@ -13,10 +13,30 @@ import SideBar from "./side-bar";
 function MainNavigation() {
 	const [burgerMenuStatus, SetBurgerMenuStatus] = useState(false);
 	const router = useRouter();
+	const [visible, setVisible] = useState(false);
+
+	const toggleVisible = () => {
+		const scrolled = document.documentElement.scrollTop;
+		if (scrolled > 0) {
+			setVisible(true);
+		} else {
+			setVisible(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", toggleVisible);
+	}, []);
 
 	return (
 		<fragment>
-			<Header id='header'>
+			<Header
+				id='header'
+				style={{
+					zIndex: visible ? 500 : 10,
+					position: visible ? "sticky !important" : "fixed",
+				}}
+				router={router.pathname}>
 				<CustomContainer>
 					<Link href='/'>
 						<a>
@@ -94,12 +114,16 @@ const CustomContainer = styled.div`
 const Header = styled.header`
 	color: white;
 	background: var(--color-primary);
-	/* background-image: linear-gradient(
+	background-image: ${(props) =>
+		props.router === "/"
+			? ``
+			: `linear-gradient(
 		to right,
 		rgba(0, 208, 176, 0.4),
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
-	); */
+	)`};
+
 	width: 100%;
 	height: 7rem;
 	display: flex;
@@ -107,7 +131,7 @@ const Header = styled.header`
 	align-items: center;
 	padding: 0 9%;
 	width: 100vw;
-	position: sticky;
+
 	top: 0;
 	z-index: 10;
 	a {

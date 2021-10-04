@@ -2,12 +2,32 @@
 
 import Image from "next/image";
 import styled from "styled-components";
-import { memo } from "react";
+import { memo, useRef, useEffect, useState } from "react";
+
 import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 function Hero() {
+	const autoScrollToBottomRef = useRef(null);
+
+	// Auto Scroll functionality
+	useEffect(() => {
+		window.scrollTo({
+			// top: 0,
+			behavior: "smooth",
+		});
+		// Auto Scroll functionality
+		autoScrollToBottomRef?.current?.scrollIntoView({
+			behavior: "smooth",
+		});
+	}, []);
+
 	return (
-		<HeroWrapper>
+		<HeroWrapper style={{ position: "relative" }}>
+			{/* Empty div for auto scroll */}
+			<div
+				ref={autoScrollToBottomRef}
+				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
+				className='auto-scroll'></div>
 			<AbsoluteRoundBordersComponent />
 
 			<AbsoluteBackGroundlinearGradient>
@@ -92,6 +112,7 @@ const HeroWrapper = styled.div`
 		#0f0b33
 	); */
 	padding: 5rem 9%;
+	padding-top: 12rem;
 
 	* {
 		opacity: 0.99;
@@ -99,8 +120,8 @@ const HeroWrapper = styled.div`
 	}
 
 	@media (min-width: 768px) {
-		padding: 8rem 9% !important;
-		padding-right: 0;
+		padding: 8rem 9%;
+		padding-top: 15rem;
 	}
 	@media (min-width: 1169px) {
 		padding-bottom: 300px !important;
@@ -109,8 +130,10 @@ const HeroWrapper = styled.div`
 
 const ContentContainer = styled.div`
 	flex: 1;
+
 	max-width: 36.1875rem;
 	margin-right: 2rem;
+
 	h1 {
 		font-family: Poppins;
 		font-style: normal;
@@ -142,6 +165,8 @@ const ContentContainer = styled.div`
 `;
 
 const CustomContainer = styled.div`
+	position: relative;
+	z-index: 100;
 	width: 100%;
 	max-width: var(--max-width);
 	overflow: hidden;
@@ -237,8 +262,8 @@ const AbsoluteBackGroundlinearGradient = styled.div`
 	top: -700px;
 	left: -700px;
 	position: absolute;
-	z-index: 15 !important;
-
+	pointer-events: none;
+	z-index: 10;
 	@media (min-width: 1500px) {
 		width: 1800px;
 		height: 1700px;

@@ -1,13 +1,12 @@
 /** @format */
 
 import styled from "styled-components";
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
-import { memo } from "react";
 import Image from "next/image";
 import AttachmentIcon from "@material-ui/icons/Attachment";
-import { useRef, useEffect } from "react";
+import { memo, useRef, useEffect } from "react";
 
 import UIParagraph from "../ui/paragraph";
+import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 const HirUsPageComponent = () => {
 	const autoScrollToBottomRef = useRef(null);
@@ -15,7 +14,7 @@ const HirUsPageComponent = () => {
 	// Auto Scroll functionality
 	useEffect(() => {
 		window.scrollTo({
-			top: 0,
+			// top: 0,
 			behavior: "smooth",
 		});
 		// Auto Scroll functionality
@@ -171,6 +170,7 @@ const Wrapper = styled.div`
 	min-height: 100vh;
 	background: #e5e5e5;
 	padding: 5rem 9%;
+	padding-top: 12rem;
 	position: relative;
 	padding-bottom: 8rem;
 	@media (min-width: 768px) {

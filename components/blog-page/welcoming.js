@@ -1,13 +1,33 @@
 /** @format */
 
 import styled from "styled-components";
-import { memo } from "react";
+import { memo, useRef, useEffect } from "react";
 
 import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 const Welcoming = () => {
+	const autoScrollToBottomRef = useRef(null);
+
+	// Auto Scroll functionality
+	useEffect(() => {
+		window.scrollTo({
+			// top: 0,
+			behavior: "smooth",
+		});
+		// Auto Scroll functionality
+		autoScrollToBottomRef?.current?.scrollIntoView({
+			behavior: "smooth",
+		});
+	}, []);
+
 	return (
-		<Wrapper>
+		<Wrapper style={{ position: "relative" }}>
+			{/* Empty div for auto scroll */}
+			<div
+				ref={autoScrollToBottomRef}
+				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
+				className='auto-scroll'></div>
+
 			<AbsoluteRoundBordersComponent />
 			<CustomContainer>
 				<AbsoluteContainer>
@@ -56,6 +76,7 @@ const Wrapper = styled.div`
 	min-height: 90vh;
 	background: var(--color-primary);
 	padding: 5rem 9%;
+	padding-top: 12rem;
 	padding-bottom: 10rem;
 	color: white;
 	display: grid;
@@ -63,7 +84,7 @@ const Wrapper = styled.div`
 	position: relative;
 	background-image: linear-gradient(
 		to right,
-		rgba(0, 208, 176, 0.4),
+		#09525f,
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
 	);

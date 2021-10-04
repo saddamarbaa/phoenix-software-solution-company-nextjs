@@ -35,6 +35,8 @@ const Wrapper = styled.div`
 	text-transform: uppercase;
 	font-size: var(--size-5);
 	font-weight: bold;
+	z-index: 101;
+	position: relative;
 
 	.logo {
 		width: 3.825rem;

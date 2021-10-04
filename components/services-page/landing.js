@@ -2,7 +2,8 @@
 
 import styled from "styled-components";
 import Image from "next/image";
-import { memo } from "react";
+import { memo, useRef, useEffect } from "react";
+
 import { useRouter } from "next/router";
 
 import UIButton from "../ui/button";
@@ -12,10 +13,34 @@ import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 const Landing = () => {
 	const router = useRouter();
+
+	const autoScrollToBottomRef = useRef(null);
+
+	// Auto Scroll functionality
+	useEffect(() => {
+		window.scrollTo({
+			// top: 0,
+			behavior: "smooth",
+		});
+		// Auto Scroll functionality
+		autoScrollToBottomRef?.current?.scrollIntoView({
+			behavior: "smooth",
+		});
+	}, []);
+
 	return (
 		<>
-			<FirstWrapper>
-				<AbsoluteRoundBordersComponent />{" "}
+			<FirstWrapper style={{ position: "relative" }}>
+				{/* Empty div for auto scroll */}
+				<div
+					ref={autoScrollToBottomRef}
+					style={{
+						paddingTop: "7rem",
+						position: "absolute",
+						top: "-100px",
+					}}
+					className='auto-scroll'></div>
+				<AbsoluteRoundBordersComponent />
 			</FirstWrapper>
 			<Wrapper>
 				<FirstContainer>
@@ -181,12 +206,12 @@ const Wrapper = styled.div`
 	min-height: 100vh;
 	background: #e5e5e5;
 	padding: 5rem 9%;
+	padding-top: 12rem;
 	width: 100vw;
 	position: relative;
 
 	@media (min-width: 768px) {
-		padding: 8rem 9% !important;
-		padding-bottom: 15rem !important;
+		padding: 15rem 9% !important;
 	}
 
 	.hid-s {

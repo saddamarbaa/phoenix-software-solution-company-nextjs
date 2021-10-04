@@ -15,7 +15,7 @@ const WorkDetailComponent = () => {
 	// Auto Scroll functionality
 	useEffect(() => {
 		window.scrollTo({
-			top: 0,
+			// top: 0,
 			behavior: "smooth",
 		});
 		// Auto Scroll functionality
@@ -29,7 +29,7 @@ const WorkDetailComponent = () => {
 			{/* Empty div for auto scroll */}
 			<div
 				ref={autoScrollToBottomRef}
-				style={{ paddingTop: "7rem", position: "absolute", top: "0" }}
+				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
 				className='auto-scroll'></div>
 
 			<CustomContainer>
@@ -238,9 +238,10 @@ const Wrapper = styled.div`
 	position: relative;
 	width: 100vw;
 	padding: 5rem 9% !important;
-
+	padding-top: 12rem !important;
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;
+		padding-top: 15rem !important;
 		min-height: 100vh;
 		padding-bottom: 10rem !important;
 	}

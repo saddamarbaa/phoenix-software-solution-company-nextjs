@@ -11,7 +11,6 @@ const ContactLanding = () => {
 	// Auto Scroll functionality
 	useEffect(() => {
 		window.scrollTo({
-			top: 0,
 			behavior: "smooth",
 		});
 		// Auto Scroll functionality
@@ -73,11 +72,13 @@ const TopWrapper = styled.div`
 	);
 
 	padding: 5rem 9%;
+	padding-top: 12rem !important;
 	padding-bottom: 2rem;
 	color: white;
 	@media (min-width: 768px) {
-		min-height: 100vh;
+		min-height: 80vh;
 		padding: 8rem 0 !important;
+		padding-top: 15rem !important;
 	}
 	@media (min-width: 1169px) {
 		padding-bottom: 300px !important;

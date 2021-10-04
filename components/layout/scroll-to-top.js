@@ -41,6 +41,7 @@ const ScrollToTopWrapper = styled.div`
 	bottom: 5rem;
 	min-width: 3rem;
 	min-height: 3rem;
+	z-index: 9999999;
 	background-color: var(--color-secondary);
 	border: 1px solid var(--color-secondary);
 	transition-duration: var(--transition-duration);

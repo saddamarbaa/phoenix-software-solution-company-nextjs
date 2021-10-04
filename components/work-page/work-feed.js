@@ -2,11 +2,11 @@
 
 import styled from "styled-components";
 import Image from "next/image";
-import { Avatar } from "@material-ui/core";;
+import { Avatar } from "@material-ui/core";
 import { memo } from "react";
 import { useRouter } from "next/router";
 
-import CustomGrid from "./grid"
+import CustomGrid from "./grid";
 
 const WorkFeed = () => {
 	const router = useRouter();
@@ -95,6 +95,7 @@ const WorkFeed = () => {
 export default memo(WorkFeed);
 
 const WorkWrapper = styled.section`
+	z-index: 100;
 	position: relative;
 	min-height: 20vh;
 	padding: 5rem 9% !important;
