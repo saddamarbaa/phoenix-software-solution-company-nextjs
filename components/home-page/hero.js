@@ -4,8 +4,6 @@ import Image from "next/image";
 import styled from "styled-components";
 import { memo, useRef, useEffect, useState } from "react";
 
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
-
 function Hero() {
 	const autoScrollToBottomRef = useRef(null);
 
@@ -28,7 +26,6 @@ function Hero() {
 				ref={autoScrollToBottomRef}
 				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
 				className='auto-scroll'></div>
-			<AbsoluteRoundBordersComponent />
 
 			<AbsoluteBackGroundlinearGradient>
 				<LinearGradientImageContainer

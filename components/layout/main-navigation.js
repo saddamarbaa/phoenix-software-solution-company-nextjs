@@ -133,7 +133,8 @@ const Header = styled.header`
 	width: 100vw;
 
 	top: 0;
-	z-index: 10;
+	/* z-index: 10; */
+
 	a {
 		color: white;
 	}

@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import UIButton from "../ui/button";
 import UIParagraph from "../ui/paragraph";
 import GridItem from "../work-page/grid-item";
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
 
 const Landing = () => {
 	const router = useRouter();
@@ -40,7 +39,6 @@ const Landing = () => {
 						top: "-100px",
 					}}
 					className='auto-scroll'></div>
-				<AbsoluteRoundBordersComponent />
 			</FirstWrapper>
 			<Wrapper>
 				<FirstContainer>

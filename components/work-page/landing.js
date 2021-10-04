@@ -3,8 +3,6 @@
 import styled from "styled-components";
 import { memo, useRef, useEffect } from "react";
 
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
-
 const Landing = () => {
 	const autoScrollToBottomRef = useRef(null);
 
@@ -31,7 +29,7 @@ const Landing = () => {
 					top: "-100px",
 				}}
 				className='auto-scroll'></div>
-			<AbsoluteRoundBordersComponent />
+
 			<CustomContainer>
 				<h2>OUR WORK</h2>
 				<p>Our latest client works</p>

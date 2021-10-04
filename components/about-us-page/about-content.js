@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Image from "next/image";
 import { memo, useRef, useEffect } from "react";
 
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
-
 const AboutContent = () => {
 	const autoScrollToBottomRef = useRef(null);
 
@@ -23,8 +21,6 @@ const AboutContent = () => {
 
 	return (
 		<Wrapper>
-			<AbsoluteRoundBordersComponent />
-
 			{/* Empty div for auto scroll */}
 			<div
 				ref={autoScrollToBottomRef}

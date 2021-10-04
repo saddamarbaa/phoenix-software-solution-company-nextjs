@@ -95,17 +95,23 @@ const WorkFeed = () => {
 export default memo(WorkFeed);
 
 const WorkWrapper = styled.section`
-	z-index: 100;
 	position: relative;
 	min-height: 20vh;
-	padding: 5rem 9% !important;
+	padding: 5rem 9%;
+	padding-top: 12rem !important;
 	background: #e5e5e5;
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;
+		padding-top: 15rem !important;
 	}
 
 	@media (min-width: 1169px) {
 		padding-top: 480px !important;
+	}
+
+	* {
+		opacity: 0.99;
+		z-index: 50;
 	}
 `;
 

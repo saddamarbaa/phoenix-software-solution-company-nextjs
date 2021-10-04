@@ -190,6 +190,7 @@ const CustomContainer = styled.footer`
 					background: rgba(255, 255, 255, 20%);
 					left: -2px;
 					top: -300px;
+					display: none;
 				}
 			}
 			li {

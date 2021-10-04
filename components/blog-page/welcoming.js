@@ -3,8 +3,6 @@
 import styled from "styled-components";
 import { memo, useRef, useEffect } from "react";
 
-import AbsoluteRoundBordersComponent from "../absolute-border/absolute-border";
-
 const Welcoming = () => {
 	const autoScrollToBottomRef = useRef(null);
 
@@ -28,7 +26,6 @@ const Welcoming = () => {
 				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
 				className='auto-scroll'></div>
 
-			<AbsoluteRoundBordersComponent />
 			<CustomContainer>
 				<AbsoluteContainer>
 					<div className='content-container'>
@@ -171,7 +168,6 @@ const CustomButton = styled.button`
 	background-color: #f9f9f9;
 	border: 1px solid #f9f9f9;
 	padding: 0.5rem 1rem;
-	border-top: 4px solid var(--color-secondary);
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 	transition-duration: var(--transition-duration);
 	min-width: fit-content;
@@ -182,5 +178,6 @@ const CustomButton = styled.button`
 	}
 	&:hover {
 		border: 2px solid var(--color-secondary);
+		border-bottom: 0;
 	}
 `;
