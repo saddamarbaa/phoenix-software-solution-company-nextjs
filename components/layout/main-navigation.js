@@ -1,10 +1,9 @@
 /** @format */
 
 import Link from "next/link";
-import { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
-import React, { fragment, useEffect } from "react";
+import React, { fragment, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import Logo from "./logo";
@@ -14,6 +13,7 @@ function MainNavigation() {
 	const [burgerMenuStatus, SetBurgerMenuStatus] = useState(false);
 	const router = useRouter();
 	const [visible, setVisible] = useState(false);
+	const [isTransparent, setIsTransparent] = useState(false);
 
 	const toggleVisible = () => {
 		const scrolled = document.documentElement.scrollTop;
@@ -26,6 +26,16 @@ function MainNavigation() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", toggleVisible);
+
+		if (
+			router.pathname == "/detail-blog" ||
+			router.pathname == "/services" ||
+			router.pathname == "/about-us" ||
+			router.pathname == "/hire-us" ||
+			router.pathname == "/work-detail"
+		) {
+			setIsTransparent(true);
+		}
 	}, []);
 
 	return (
@@ -35,12 +45,16 @@ function MainNavigation() {
 				style={{
 					zIndex: visible ? 500 : 10,
 					position: visible ? "sticky !important" : "fixed",
+					background: visible ? "#0f0b33" : "transparent",
+					transition: visible ? "none" : "background 0.4s",
 				}}
-				router={router.pathname}>
+				router={router.pathname}
+				isTransparent={isTransparent}
+				visible={visible}>
 				<CustomContainer>
 					<Link href='/'>
 						<a>
-							<Logo />
+							<Logo isTransparent={isTransparent} visible={visible} />
 						</a>
 					</Link>
 					<nav className='show'>
@@ -78,6 +92,10 @@ function MainNavigation() {
 								<MenuIcon
 									style={{
 										cursor: "pointer",
+										color:
+											isTransparent && !visible
+												? `#0f0b33`
+												: `white`,
 									}}
 									onClick={() => {
 										SetBurgerMenuStatus(true);
@@ -93,6 +111,8 @@ function MainNavigation() {
 				<SideBar
 					burgerMenuStatus={burgerMenuStatus}
 					SetBurgerMenuStatus={SetBurgerMenuStatus}
+					isTransparent={isTransparent}
+					visible={visible}
 				/>
 			)}
 		</fragment>
@@ -133,10 +153,10 @@ const Header = styled.header`
 	width: 100vw;
 
 	top: 0;
-	/* z-index: 10; */
 
 	a {
-		color: white;
+		color: ${(props) =>
+			props.isTransparent && !props.visible ? `#0f0b33` : `white`};
 	}
 	nav {
 		flex: 1;
@@ -196,8 +216,17 @@ const Header = styled.header`
 		height: 48px;
 		font: inherit;
 		cursor: pointer;
-		background-color: #ffffff;
-		border: 1px solid #ffffff;
+		border: 0;
+		outline: none;
+
+		border: ${(props) =>
+			props.isTransparent ? `2px solid #00d0b0` : `2px solid #0f0b33`};
+
+		background-color: ${(props) =>
+			props.isTransparent ? `#00d0b0` : `white`};
+
+		color: ${(props) => (props.isTransparent ? `white` : ` #0f0b33`)};
+
 		padding: 0.5rem 1rem;
 		border-radius: 4px;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);

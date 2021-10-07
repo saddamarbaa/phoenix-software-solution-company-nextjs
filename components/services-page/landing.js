@@ -85,7 +85,7 @@ const Landing = () => {
 						<div
 							className='hid-s'
 							onClick={() => {
-								router.push("/hir-us");
+								router.push("/hire-us");
 							}}>
 							<UIButton>HIRE US</UIButton>
 						</div>
@@ -167,7 +167,7 @@ const Landing = () => {
 						<div
 							className='hid-s'
 							onClick={() => {
-								router.push("/hir-us");
+								router.push("/hire-us");
 							}}>
 							<UIButton>HIRE US</UIButton>
 						</div>

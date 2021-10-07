@@ -2,10 +2,11 @@
 
 import styled from "styled-components";
 import Image from "next/image";
+import { memo } from "react";
 
-function Logo() {
+function Logo({ isTransparent, visible }) {
 	return (
-		<Wrapper>
+		<Wrapper isTransparent={isTransparent} visible={visible}>
 			<div
 				className='logo'
 				style={{
@@ -25,7 +26,7 @@ function Logo() {
 	);
 }
 
-export default Logo;
+export default memo(Logo);
 
 const Wrapper = styled.div`
 	height: 6rem;
@@ -57,5 +58,7 @@ const Wrapper = styled.div`
 		font-weight: 600;
 		font-size: 24px;
 		letter-spacing: -6%;
+		color: ${(props) =>
+			props.isTransparent && !props.visible ? `#0f0b33` : `white`};
 	}
 `;

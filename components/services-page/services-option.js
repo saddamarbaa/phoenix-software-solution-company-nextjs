@@ -47,11 +47,11 @@ const ServicesOption = () => {
 					<div
 						className='hid-s'
 						onClick={() => {
-							router.push("/hir-us");
+							router.push("/hire-us");
 						}}>
 						<UIButton
 							onClick={() => {
-								router.push("/hir-us");
+								router.push("/hire-us");
 							}}>
 							HIRE US
 						</UIButton>

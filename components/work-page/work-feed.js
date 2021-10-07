@@ -83,7 +83,7 @@ const WorkFeed = () => {
 
 				<CustomButton
 					onClick={() => {
-						router.push("/hir-us");
+						router.push("/hire-us");
 					}}>
 					HIRE US
 				</CustomButton>

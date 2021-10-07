@@ -51,12 +51,14 @@ const CustomContainer = styled.div`
 	margin: 0 auto;
 	width: 100vw;
 	display: grid;
-	place-items: center;
+
+	@media (min-width: 768px) {
+		place-items: center;
+	}
 `;
 
 const TopWrapper = styled.div`
 	@media (max-width: 768px) {
-		display: none;
 	}
 
 	background: var(--color-primary);
@@ -69,7 +71,7 @@ const TopWrapper = styled.div`
 
 	padding: 5rem 9%;
 	padding-top: 12rem !important;
-	padding-bottom: 2rem;
+
 	color: white;
 	@media (min-width: 768px) {
 		min-height: 80vh;

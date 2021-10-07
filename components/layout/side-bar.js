@@ -8,7 +8,7 @@ import ReactDOM from "react-dom";
 
 import BackDrop from "../ui/backdrop";
 
-const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus }) => {
+const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus, isTransparent }) => {
 	// Portal
 	return (
 		<BackDrop>

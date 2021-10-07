@@ -52,9 +52,11 @@ const Wrapper = styled.div`
 	position: relative;
 	width: 100vw;
 	padding: 5rem 9% !important;
+	padding-top: 10rem !important;
 
 	@media (min-width: 768px) {
-		padding: 8rem 9% !important;
+		padding: 10rem 9% !important;
+
 		min-height: 100vh;
 	}
 

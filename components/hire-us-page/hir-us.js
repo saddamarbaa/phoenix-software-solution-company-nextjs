@@ -31,7 +31,6 @@ const HirUsPageComponent = () => {
 				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
 				className='auto-scroll'></div>
 
-			<AbsoluteRoundBordersComponent />
 			<CustomContainer>
 				<HirUsContainer>
 					<h1>Hire Us</h1>

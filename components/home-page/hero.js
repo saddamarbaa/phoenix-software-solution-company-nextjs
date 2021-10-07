@@ -27,7 +27,7 @@ function Hero() {
 				style={{ paddingTop: "7rem", position: "absolute", top: "-100px" }}
 				className='auto-scroll'></div>
 
-			<AbsoluteBackGroundlinearGradient>
+			{/* <AbsoluteBackGroundlinearGradient>
 				<LinearGradientImageContainer
 					style={{
 						position: "relative",
@@ -40,7 +40,7 @@ function Hero() {
 						objectFit='cover'
 					/>
 				</LinearGradientImageContainer>
-			</AbsoluteBackGroundlinearGradient>
+			</AbsoluteBackGroundlinearGradient> */}
 
 			<CustomContainer>
 				<ContentContainer>

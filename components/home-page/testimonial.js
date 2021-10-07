@@ -77,7 +77,7 @@ const TESTIMONIAL = () => {
 							</p>
 						</div>
 
-						<Link href='/hir-us'>
+						<Link href='/hire-us'>
 							<a>
 								<CustomButton>HIRE US</CustomButton>
 							</a>
