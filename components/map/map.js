@@ -20,7 +20,7 @@ const Map = () => {
 				height='100%'
 				onViewportChange={(viewport) => setViewport(viewport)}
 				mapStyle='mapbox://styles/saddams/ckui2fkbc4vue17ql8bt2d7d8'
-				mapboxApiAccessToken={process.env.MAP_BOX_ACCESS_TOKEN}
+				mapboxApiAccessToken='pk.eyJ1Ijoic2FkZGFtcyIsImEiOiJja3VmZ3o5a3AxdWJhMnVvMW91bTdieW53In0.aHyMyQahu3VeA6oXZR9plg'
 			/>
 		</Wrapper>
 	);

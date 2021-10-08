@@ -64,7 +64,7 @@ function MainNavigation() {
 								id={router.pathname == "/" ? "active" : ""}>
 								<Link href='/'>HOME</Link>
 							</li>
-							<li className='hid-ss'>
+							<li id={router.pathname == "/work" ? "active" : ""}>
 								<Link href='/work'>WORK</Link>
 							</li>
 							<li
@@ -178,6 +178,7 @@ const Header = styled.header`
 				a {
 					display: block;
 					transition: var(--transition-duration);
+					border-bottom: 2px solid transparent;
 					&:hover,
 					&:active {
 						border-bottom: 2px solid var(--color-secondary);

@@ -198,6 +198,7 @@ const CustomContainer = styled.footer`
 			}
 			a {
 				color: white;
+				border: 2px solid transparent;
 				transition-duration: var(--transition-duration);
 				&:hover,
 				&:active {
