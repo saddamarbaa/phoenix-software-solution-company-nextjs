@@ -7,10 +7,7 @@ module.exports = (phase) => {
 		return {
 			reactStrictMode: true,
 			env: {
-				MONGODB_USERNAME: process.env.MONGODB_USERNAME,
-				MONGODB_PASSWORD: process.env.MONGODB_PASSWORD,
-				MONGODB_CLUSTER_NAME: process.env.MONGODB_CLUSTER_NAME,
-				MONGODB_DATABASE: process.env.MONGODB_DATABASE_DEV,
+				MAP_BOX_ACCESS_TOKEN: process.env.MAP_BOX_ACCESS_TOKEN,
 			},
 		};
 	}
@@ -18,10 +15,7 @@ module.exports = (phase) => {
 	return {
 		reactStrictMode: true,
 		env: {
-			MONGODB_USERNAME: process.env.MONGODB_USERNAME,
-			MONGODB_PASSWORD: process.env.MONGODB_PASSWORD,
-			MONGODB_CLUSTER_NAME: process.env.MONGODB_CLUSTER_NAME,
-			MONGODB_DATABASE: process.env.MONGODB_DATABASE_PROD,
+			MAP_BOX_ACCESS_TOKEN: process.env.MAP_BOX_ACCESS_TOKEN,
 		},
 	};
 };

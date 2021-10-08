@@ -5,6 +5,7 @@ import { Fragment, memo } from "react";
 import ContactFormComponent from "./contact-form";
 import ContactLanding from "./contact-landing";
 import MainNavigation from "../layout/main-navigation";
+import Map from "../map/map";
 
 const ContactComponent = () => {
 	return (
@@ -12,6 +13,7 @@ const ContactComponent = () => {
 			<MainNavigation />
 			<ContactLanding />
 			<ContactFormComponent />
+			<Map />
 		</Fragment>
 	);
 };

@@ -171,7 +171,9 @@ const BottomWrapper = styled.div`
 	min-height: 100vh;
 	@media (min-width: 768px) {
 		padding: 8rem 9% !important;
+		padding-bottom: 0px !important;
 	}
+
 	@media (min-width: 1169px) {
 		padding-top: 350px !important;
 	}
@@ -227,6 +229,9 @@ const ContactForm = styled.div`
 	border-radius: 6px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 	padding: 2rem;
+
+	position: relative;
+	z-index: 3;
 	h1 {
 		font-weight: 700;
 		color: var(--color-secondary-second);

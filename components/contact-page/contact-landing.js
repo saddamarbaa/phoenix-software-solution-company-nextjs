@@ -77,9 +77,7 @@ const TopWrapper = styled.div`
 		min-height: 80vh;
 		padding: 8rem 0 !important;
 		padding-top: 15rem !important;
-	}
-	@media (min-width: 1169px) {
-		padding-bottom: 300px !important;
+		padding-bottom: 0 !important;
 	}
 `;
 
