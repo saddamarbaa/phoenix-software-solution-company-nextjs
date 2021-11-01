@@ -1,4 +1,162 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# www.phoenixtechteam.com
+
+Building PHOENIX SOFTWARE SOLUTION Agency WebSide with React Js, Next Js, TypeScript, Redux, 
+Styled Components, Node Js, Express, MongoDB, Socket.IO, Vercel Hosting,
+with complete user authentication (a mobile-friendly).
+
+# Table of contents
+
+-  [Demo](#Demo)
+-   [Mockup - Figma + Adobe XD Link ](#Mockup)
+-  [Technologies](#Technologies)
+-  [Optimizations](#Optimizations)
+-  [Status](#status)
+-  [Features](#Features)
+-  [Run Locally](#Run_Locally)
+-  [Environment Variables](#Environment)
+-  [Screenshots](#Screenshots)
+
+
+
+
+# Mockup 
+##  <a href="https://www.figma.com/file/Or3aXdkrEIJzcLdrqUEltF/PHOENIX-SOFTWARE-SOLUTIONS-WEBSITE?node-id=2%3A18"> Figma Link </a>
+##  <a href="https://xd.adobe.com/view/d605d243-9af7-4e65-8688-a735ee56354c-8356/"> Adobe XD Link (Admin Dashboard) </a>
+
+
+# Technologies
+
+**Client:**
+
+-  React Js
+-  Next Js
+-  TypeScript
+-  Redux
+-  Styled Components
+-  Material UI
+
+**Server:**
+
+-  Node Js
+-  Express
+-  MongoDB
+-  Vercel Hosting
+-  Socket.IO
+-  JSON Web Token
+
+
+# Demo
+
+## <a href="https://www.phoenixtechteam.com/">LIVE DEMO</a>
+## <a href="https://phoenix-software-solution.vercel.app/">LIVE DEMO</a>
+
+
+# Optimizations
+
+-  Next' Js Image component
+-  Next' Js file-system based router
+-  Next' Js Server-side rendering
+-  Memoization (useMemo, Memo)
+-  Function components
+-  React hooks
+-  React useEffect cleanup
+-  TypeScript
+-  TODO
+
+
+# Features
+
+-  TODO
+
+
+
+
+# Run_Locally
+
+Clone the project
+
+```bash
+https://github.com/saddamarbaa/phoenix-software-solution-company-nextjs
+```
+
+Go to the project directory
+
+```bash
+  cd phoenix-software-solution-company-nextjs
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+# Environment
+
+- TODO
+
+
+# Status
+
+Project is In progress
+
+
+
+
+# Screenshots
+
+ ## Home Page
+![image](https://user-images.githubusercontent.com/51326421/139734370-5053543b-702e-4def-83bc-ffd99b065579.png)
+
+
+
+ ## Work Page
+![image](https://user-images.githubusercontent.com/51326421/139734689-b1e269bf-bba2-463e-ac93-15481db18f46.png)
+
+
+
+ ## Work Detail Page
+![image](https://user-images.githubusercontent.com/51326421/139736101-76b86317-2d4d-48e1-9e53-3ee0e1b54e73.png)
+
+
+
+ ## Services Page
+![image](https://user-images.githubusercontent.com/51326421/139734937-cd2017ed-fb7d-42bc-b7f4-b1cd5b6db031.png)
+
+
+ ## Blog Page
+![image](https://user-images.githubusercontent.com/51326421/139735089-dbdb7366-f3b9-496e-8921-11e2d5733185.png)
+
+
+
+ ## Blog Detail Page
+![image](https://user-images.githubusercontent.com/51326421/139736356-dac26ce1-f469-4fd1-bc01-eaa6d16f8cc5.png)
+
+
+
+ ## About Us Page
+![image](https://user-images.githubusercontent.com/51326421/139735264-2a8dbc62-c3e4-415f-9fea-9d6512567c6d.png)
+
+
+ ## Contact Page
+![image](https://user-images.githubusercontent.com/51326421/139735491-9f523053-eab5-40e4-9a22-1f54a826b342.png)
+
+
+
+ ## Hire Us Page
+![image](https://user-images.githubusercontent.com/51326421/139736520-651d6294-b082-4523-a7b6-838247e2818a.png)
+
+
+
+
 
 ## Getting Started
 
