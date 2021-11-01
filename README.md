@@ -162,6 +162,13 @@ Project is In progress
 
 
 
+## Hire Us Page (Form Validatio)
+![image](https://user-images.githubusercontent.com/51326421/139741452-2a05282c-fd83-4173-97ee-569c6360d405.png)
+
+
+
+
+
 
  ## Admin Dashboard
 ![image](https://user-images.githubusercontent.com/51326421/139740438-37a92794-45f3-45db-ac9e-017bbcab1142.png)
