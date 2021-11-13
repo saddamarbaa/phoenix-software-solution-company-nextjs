@@ -7,7 +7,8 @@ module.exports = (phase) => {
 		return {
 			reactStrictMode: true,
 			env: {
-				MAP_BOX_ACCESS_TOKEN: process.env.MAP_BOX_ACCESS_TOKEN,
+				NEXT_PUBLIC_MAP_BOX_ACCESS_TOKEN:
+					process.env.NEXT_PUBLIC_MAP_BOX_ACCESS_TOKEN,
 			},
 		};
 	}
@@ -15,7 +16,8 @@ module.exports = (phase) => {
 	return {
 		reactStrictMode: true,
 		env: {
-			MAP_BOX_ACCESS_TOKEN: process.env.MAP_BOX_ACCESS_TOKEN,
+			NEXT_PUBLIC_MAP_BOX_ACCESS_TOKEN:
+				process.env.NEXT_PUBLIC_MAP_BOX_ACCESS_TOKEN,
 		},
 	};
 };

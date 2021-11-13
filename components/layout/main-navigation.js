@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
-import React, { fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import Logo from "./logo";
@@ -39,7 +39,7 @@ function MainNavigation() {
 	}, []);
 
 	return (
-		<fragment>
+		<React.Fragment>
 			<Header
 				id='header'
 				style={{
@@ -64,7 +64,9 @@ function MainNavigation() {
 								id={router.pathname == "/" ? "active" : ""}>
 								<Link href='/'>HOME</Link>
 							</li>
-							<li id={router.pathname == "/work" ? "active" : ""}>
+							<li
+								className='hid-s'
+								id={router.pathname == "/work" ? "active" : ""}>
 								<Link href='/work'>WORK</Link>
 							</li>
 							<li
@@ -115,7 +117,7 @@ function MainNavigation() {
 					visible={visible}
 				/>
 			)}
-		</fragment>
+		</React.Fragment>
 	);
 }
 
@@ -143,7 +145,6 @@ const Header = styled.header`
 		rgba(15, 11, 51, 0.3),
 		#0f0b33
 	)`};
-
 	width: 100%;
 	height: 7rem;
 	display: flex;
@@ -151,9 +152,7 @@ const Header = styled.header`
 	align-items: center;
 	padding: 0 9%;
 	width: 100vw;
-
 	top: 0;
-
 	a {
 		color: ${(props) =>
 			props.isTransparent && !props.visible ? `#0f0b33` : `white`};
@@ -219,15 +218,11 @@ const Header = styled.header`
 		cursor: pointer;
 		border: 0;
 		outline: none;
-
 		border: ${(props) =>
 			props.isTransparent ? `2px solid #00d0b0` : `2px solid #0f0b33`};
-
 		background-color: ${(props) =>
 			props.isTransparent ? `#00d0b0` : `white`};
-
 		color: ${(props) => (props.isTransparent ? `white` : ` #0f0b33`)};
-
 		padding: 0.5rem 1rem;
 		border-radius: 4px;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
